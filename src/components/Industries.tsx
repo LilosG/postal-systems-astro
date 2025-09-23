@@ -1,11 +1,11 @@
 const Industries = () => {
   const industries = [
-    { name: "HOAs & Property Managers", param: "hoa" },
-    { name: "Apartments & Multifamily", param: "apartment" },
-    { name: "Builders & General Contractors", param: "builder" },
-    { name: "Commercial & Industrial Parks", param: "commercial" },
-    { name: "Campuses & Municipal", param: "municipal" }
-  ];
+    { name: 'HOAs & Property Managers', param: 'hoa' },
+    { name: 'Apartments & Multifamily', param: 'apartment' },
+    { name: 'Builders & General Contractors', param: 'builder' },
+    { name: 'Commercial & Industrial Parks', param: 'commercial' },
+    { name: 'Campuses & Municipal', param: 'municipal' },
+  ]
 
   return (
     <section id="industries" className="py-20 bg-[hsl(var(--secondary))]">
@@ -15,7 +15,8 @@ const Industries = () => {
             Industries We Serve
           </h2>
           <p className="text-lg text-[hsl(var(--postal-slate))] max-w-2xl mx-auto font-inter">
-            Specialized mailbox solutions for diverse property types across San Diego County.
+            Specialized mailbox solutions for diverse property types across San
+            Diego County.
           </p>
         </div>
 
@@ -32,7 +33,7 @@ const Industries = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Industries;
+export default Industries

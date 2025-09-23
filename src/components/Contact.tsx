@@ -1,5 +1,5 @@
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send } from 'lucide-react';
+import { useState } from 'react'
+import { Mail, Phone, MapPin, Send } from 'lucide-react'
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -9,30 +9,34 @@ const Contact = () => {
     propertyType: '',
     location: '',
     units: '',
-    message: ''
-  });
+    message: '',
+  })
 
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [isSubmitted, setIsSubmitted] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false)
+  const [isSubmitted, setIsSubmitted] = useState(false)
 
   const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-    
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000));
-    
-    setIsSubmitting(false);
-    setIsSubmitted(true);
-    console.log('Form submitted:', formData);
-  };
+    e.preventDefault()
+    setIsSubmitting(true)
 
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>) => {
+    // Simulate form submission
+    await new Promise((resolve) => setTimeout(resolve, 1000))
+
+    setIsSubmitting(false)
+    setIsSubmitted(true)
+    console.log('Form submitted:', formData)
+  }
+
+  const handleChange = (
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >
+  ) => {
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
-    });
-  };
+      [e.target.name]: e.target.value,
+    })
+  }
 
   return (
     <section id="contact" className="py-20 bg-white">
@@ -42,25 +46,43 @@ const Contact = () => {
             Get Your Free Quote
           </h2>
           <p className="text-lg text-[hsl(var(--postal-slate))] max-w-2xl mx-auto font-inter">
-            Ready to upgrade your mailbox system? Contact us for a professional consultation and detailed quote.
+            Ready to upgrade your mailbox system? Contact us for a professional
+            consultation and detailed quote.
           </p>
         </div>
 
         <div className="grid lg:grid-cols-3 gap-8">
           {/* Contact Form */}
           <div className="lg:col-span-2">
-                {isSubmitted ? (
-                  <div className="bg-[hsl(var(--secondary))] p-8 rounded-xl text-center">
-                    <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
-                      <svg className="w-8 h-8 text-green-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                      </svg>
-                    </div>
-                    <h3 className="text-xl font-semibold text-[hsl(var(--postal-navy))] mb-2 font-poppins">Thank You!</h3>
-                    <p className="text-[hsl(var(--postal-slate))] font-inter">Thanks—expect a call within one business day.</p>
-                  </div>
-                ) : (
-              <form onSubmit={handleSubmit} className="bg-[hsl(var(--secondary))] p-8 rounded-xl">
+            {isSubmitted ? (
+              <div className="bg-[hsl(var(--secondary))] p-8 rounded-xl text-center">
+                <div className="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <svg
+                    className="w-8 h-8 text-green-600"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M5 13l4 4L19 7"
+                    />
+                  </svg>
+                </div>
+                <h3 className="text-xl font-semibold text-[hsl(var(--postal-navy))] mb-2 font-poppins">
+                  Thank You!
+                </h3>
+                <p className="text-[hsl(var(--postal-slate))] font-inter">
+                  Thanks—expect a call within one business day.
+                </p>
+              </div>
+            ) : (
+              <form
+                onSubmit={handleSubmit}
+                className="bg-[hsl(var(--secondary))] p-8 rounded-xl"
+              >
                 <div className="grid md:grid-cols-2 gap-6 mb-6">
                   <div>
                     <label className="block text-sm font-medium text-[hsl(var(--postal-slate))] mb-2 font-inter">
@@ -75,7 +97,7 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[hsl(var(--postal-navy))] focus:border-transparent min-h-[44px] font-inter"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-[hsl(var(--postal-slate))] mb-2 font-inter">
                       Email *
@@ -104,7 +126,7 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[hsl(var(--postal-navy))] focus:border-transparent min-h-[44px] font-inter"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-[hsl(var(--postal-slate))] mb-2 font-inter">
                       Property Type
@@ -139,7 +161,7 @@ const Contact = () => {
                       className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:ring-2 focus:ring-[hsl(var(--postal-navy))] focus:border-transparent min-h-[44px] font-inter"
                     />
                   </div>
-                  
+
                   <div>
                     <label className="block text-sm font-medium text-[hsl(var(--postal-slate))] mb-2 font-inter">
                       Units/Boxes Count
@@ -186,7 +208,7 @@ const Contact = () => {
                     </>
                   )}
                 </button>
-                
+
                 <p className="text-sm text-[hsl(var(--muted-foreground))] mt-4 font-inter">
                   Typical lead time: 1–3 weeks
                 </p>
@@ -197,8 +219,10 @@ const Contact = () => {
           {/* Contact Info Sidebar */}
           <div className="space-y-6">
             <div className="bg-[hsl(var(--postal-navy))] text-white p-8 rounded-xl">
-              <h3 className="text-xl font-bold mb-6 font-poppins">Contact Information</h3>
-              
+              <h3 className="text-xl font-bold mb-6 font-poppins">
+                Contact Information
+              </h3>
+
               <div className="space-y-4">
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 mt-1 text-[hsl(var(--postal-red))]" />
@@ -207,27 +231,37 @@ const Contact = () => {
                     <p className="text-blue-100 font-inter">San Diego, CA</p>
                   </div>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[hsl(var(--postal-red))]" />
-                  <a href="mailto:email@postalsystemspro.com" className="hover:text-blue-200 font-inter">
+                  <a
+                    href="mailto:email@postalsystemspro.com"
+                    className="hover:text-blue-200 font-inter"
+                  >
                     email@postalsystemspro.com
                   </a>
                 </div>
-                
+
                 <div className="flex items-center space-x-3">
                   <Phone className="w-5 h-5 text-[hsl(var(--postal-red))]" />
-                  <a href="tel:6194614787" className="hover:text-blue-200 font-inter">
+                  <a
+                    href="tel:6194614787"
+                    className="hover:text-blue-200 font-inter"
+                  >
                     (619) 461-4787
                   </a>
                 </div>
               </div>
-              
+
               <div className="mt-8 pt-6 border-t border-blue-400">
                 <p className="text-sm text-blue-100 font-inter">
-                  <span className="font-medium">Licensed Contractor</span><br />
-                  CSLB #904106<br />
-                  <span className="text-xs opacity-75">San Diego County, CA</span>
+                  <span className="font-medium">Licensed Contractor</span>
+                  <br />
+                  CSLB #904106
+                  <br />
+                  <span className="text-xs opacity-75">
+                    San Diego County, CA
+                  </span>
                 </p>
               </div>
             </div>
@@ -235,7 +269,7 @@ const Contact = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default Contact;
+export default Contact

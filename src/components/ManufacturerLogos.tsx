@@ -1,9 +1,15 @@
 const ManufacturerLogos = () => {
   const manufacturers = [
-    { name: "Salsbury Industries", alt: "Salsbury Industries - Mailbox Manufacturer" },
-    { name: "Auth Florence", alt: "Auth Florence - Commercial Mailbox Solutions" },
-    { name: "Letter Locker", alt: "Letter Locker - Parcel Delivery Systems" }
-  ];
+    {
+      name: 'Salsbury Industries',
+      alt: 'Salsbury Industries - Mailbox Manufacturer',
+    },
+    {
+      name: 'Auth Florence',
+      alt: 'Auth Florence - Commercial Mailbox Solutions',
+    },
+    { name: 'Letter Locker', alt: 'Letter Locker - Parcel Delivery Systems' },
+  ]
 
   return (
     <section className="py-12 bg-white border-t border-[hsl(var(--border))]">
@@ -16,10 +22,10 @@ const ManufacturerLogos = () => {
             We work with leading mailbox manufacturers
           </p>
         </div>
-        
+
         <div className="flex flex-wrap justify-center items-center gap-8 opacity-60">
           {manufacturers.map((manufacturer, index) => (
-            <div 
+            <div
               key={index}
               className="manufacturer-logo flex items-center justify-center h-12 px-6"
               aria-label={manufacturer.alt}
@@ -32,7 +38,7 @@ const ManufacturerLogos = () => {
         </div>
       </div>
     </section>
-  );
-};
+  )
+}
 
-export default ManufacturerLogos;
+export default ManufacturerLogos

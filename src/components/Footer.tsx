@@ -1,4 +1,4 @@
-import { Mail, Facebook, Twitter, Linkedin } from 'lucide-react';
+import { Mail, Facebook, Twitter, Linkedin } from 'lucide-react'
 
 const Footer = () => {
   const quickLinks = [
@@ -8,7 +8,7 @@ const Footer = () => {
     { href: '#projects', label: 'Projects' },
     { href: '#process', label: 'Process' },
     { href: '#faq', label: 'FAQ' },
-  ];
+  ]
 
   return (
     <footer className="bg-[hsl(var(--postal-slate))] text-white py-8">
@@ -21,14 +21,16 @@ const Footer = () => {
             </div>
             <div>
               <h3 className="text-lg font-bold">Postal Systems</h3>
-              <p className="text-xs text-gray-300 -mt-1">USPS-Approved Installation</p>
+              <p className="text-xs text-gray-300 -mt-1">
+                USPS-Approved Installation
+              </p>
             </div>
           </div>
 
           {/* Center: Compact Nav */}
           <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
             {quickLinks.map((link, index) => (
-              <a 
+              <a
                 key={index}
                 href={link.href}
                 className="text-gray-300 hover:text-white transition-colors text-sm"
@@ -44,14 +46,16 @@ const Footer = () => {
             <p className="text-xs text-gray-400">San Diego County</p>
           </div>
         </div>
-        
+
         {/* Copyright Line */}
         <div className="border-t border-gray-600 mt-6 pt-4 text-center">
-          <p className="text-xs text-gray-400">© 2024 Postal Systems. All rights reserved.</p>
+          <p className="text-xs text-gray-400">
+            © 2024 Postal Systems. All rights reserved.
+          </p>
         </div>
       </div>
     </footer>
-  );
-};
+  )
+}
 
-export default Footer;
+export default Footer

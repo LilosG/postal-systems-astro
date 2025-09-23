@@ -1,16 +1,16 @@
-import * as React from 'react';
-import * as Toast from '@radix-ui/react-toast';
+import * as React from 'react'
+import * as Toast from '@radix-ui/react-toast'
 
 export function Toaster() {
-  const [open, setOpen] = React.useState(false);
+  const [open, setOpen] = React.useState(false)
 
-  (globalThis as any).__ps_toast = (msg: string) => {
-    (globalThis as any).__ps_toast_msg = msg;
-    setOpen(false);
-    queueMicrotask(() => setOpen(true));
-  };
+  ;(globalThis as any).__ps_toast = (msg: string) => {
+    ;(globalThis as any).__ps_toast_msg = msg
+    setOpen(false)
+    queueMicrotask(() => setOpen(true))
+  }
 
-  const message = (globalThis as any).__ps_toast_msg ?? '';
+  const message = (globalThis as any).__ps_toast_msg ?? ''
 
   return (
     <Toast.Provider swipeDirection="right">
@@ -36,7 +36,7 @@ export function Toaster() {
       </Toast.Root>
       <Toast.Viewport className="fixed bottom-0 right-0 z-[100] m-0 flex w-96 max-w-[100vw] list-none flex-col gap-2 p-6 outline-none" />
     </Toast.Provider>
-  );
+  )
 }
 
-export default Toaster;
+export default Toaster

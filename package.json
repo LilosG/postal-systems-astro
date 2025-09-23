@@ -6,7 +6,8 @@
     "dev": "astro dev",
     "build": "astro build",
     "preview": "astro preview",
-    "astro": "astro"
+    "astro": "astro",
+    "format": "prettier -w ."
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.12",
@@ -63,6 +64,7 @@
     "@astrojs/react": "^4.3.1",
     "@tailwindcss/postcss": "^4.1.13",
     "@tailwindcss/vite": "^4.1.13",
+    "prettier": "^3.6.2",
     "tailwindcss": "^4.1.13"
   },
   "engines": {
