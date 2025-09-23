@@ -1,0 +1,174 @@
+@import "tailwindcss";
+
+/* -----------------------------------------------------------------------------
+   Tailwind v4 Design Tokens
+   This maps your brand colors to Tailwind v4 tokens so utilities like
+   bg-background, text-foreground, and border-border work.
+----------------------------------------------------------------------------- */
+@theme {
+  /* Light */
+  --color-background: 0 0% 100%;
+  --color-foreground: 215 25% 27%;
+
+  --color-card: 0 0% 100%;
+  --color-card-foreground: 215 25% 27%;
+
+  --color-popover: 0 0% 100%;
+  --color-popover-foreground: 215 25% 27%;
+
+  --color-primary: 215 85% 31%;
+  --color-primary-foreground: 0 0% 100%;
+
+  --color-secondary: 210 40% 97%;
+  --color-secondary-foreground: 215 25% 27%;
+
+  --color-muted: 210 40% 97%;
+  --color-muted-foreground: 215 16% 47%;
+
+  --color-accent: 351 78% 52%;
+  --color-accent-foreground: 0 0% 100%;
+
+  --color-destructive: 0 84.2% 60.2%;
+  --color-destructive-foreground: 0 0% 100%;
+
+  --color-border: 214.3 31.8% 91.4%;
+  --color-input: 214.3 31.8% 91.4%;
+  --color-ring: 215 85% 31%;
+}
+
+/* Dark-mode token overrides (optional, keep if you support dark) */
+@media (prefers-color-scheme: dark) {
+  @theme {
+    --color-background: 215 25% 7%;
+    --color-foreground: 210 22% 96%;
+
+    --color-card: 215 25% 10%;
+    --color-card-foreground: 210 22% 96%;
+
+    --color-popover: 215 25% 10%;
+    --color-popover-foreground: 210 22% 96%;
+
+    --color-primary: 218 88% 45%;
+    --color-primary-foreground: 0 0% 100%;
+
+    --color-secondary: 215 25% 15%;
+    --color-secondary-foreground: 210 22% 90%;
+
+    --color-muted: 215 25% 15%;
+    --color-muted-foreground: 215 16% 65%;
+
+    --color-accent: 358 82% 60%;
+    --color-accent-foreground: 0 0% 100%;
+
+    --color-border: 215 25% 20%;
+    --color-input: 215 25% 20%;
+    --color-ring: 218 88% 45%;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Brand-specific custom properties (non-Tailwind tokens)
+   These are freeform variables you already use in your components.
+----------------------------------------------------------------------------- */
+:root {
+  --radius: 0.75rem;
+
+  /* Custom Brand Variables */
+  --postal-navy: 215 85% 31%;
+  --postal-red: 351 78% 52%;
+  --postal-slate: 215 25% 27%;
+  --postal-light: 210 40% 97%;
+
+  /* Gradients */
+  --gradient-primary: linear-gradient(135deg, hsl(215 85% 31%), hsl(215 85% 41%));
+  --gradient-accent: linear-gradient(135deg, hsl(351 78% 52%), hsl(351 78% 62%));
+  --gradient-hero: linear-gradient(180deg, hsl(0 0% 100%), hsl(210 40% 97%));
+
+  /* Shadows */
+  --shadow-soft: 0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1);
+  --shadow-card: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shadow-hero: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+}
+
+/* -----------------------------------------------------------------------------
+   Base layer
+----------------------------------------------------------------------------- */
+@layer base {
+  /* Apply a subtle border color by default (uses Tailwind v4 token) */
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-inter;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-poppins font-bold leading-tight;
+  }
+
+  /* Smooth scrolling for anchor navigation */
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+/* -----------------------------------------------------------------------------
+   Components layer
+----------------------------------------------------------------------------- */
+@layer components {
+  /* Hero button variants */
+  .btn-hero-primary {
+    @apply bg-gradient-to-r from-[hsl(var(--postal-navy))] to-[hsl(var(--postal-navy))]
+           text-white px-8 py-4 rounded-xl font-semibold
+           shadow-[var(--shadow-hero)] hover:shadow-lg hover:scale-105
+           transition-all duration-200;
+  }
+
+  .btn-hero-secondary {
+    @apply bg-white text-[hsl(var(--postal-navy))] px-8 py-4 rounded-xl font-semibold
+           border-2 border-[hsl(var(--postal-navy))]
+           hover:bg-[hsl(var(--postal-navy))] hover:text-white
+           transition-all duration-200;
+  }
+
+  /* Card styles */
+  .card-service {
+    @apply bg-white rounded-xl p-6 shadow-[var(--shadow-card)]
+           hover:shadow-lg hover:-translate-y-1 transition-all duration-300
+           border border-[hsl(var(--color-border,214.3 31.8% 91.4%))];
+  }
+
+  .card-feature {
+    @apply flex items-start gap-4 p-6 bg-white rounded-xl shadow-[var(--shadow-soft)];
+  }
+
+  /* Trust badges */
+  .trust-badge {
+    @apply inline-flex items-center gap-2 text-sm font-medium
+           text-[hsl(var(--postal-slate))] px-3 py-2
+           bg-[hsl(var(--postal-light))] rounded-full;
+  }
+
+  /* Mobile sticky bottom bar */
+  .mobile-cta-bar {
+    @apply fixed bottom-0 left-0 right-0 bg-white
+           border-t border-[hsl(var(--color-border,214.3 31.8% 91.4%))]
+           p-4 flex gap-3 shadow-lg z-40 md:hidden;
+  }
+
+  /* Manufacturer logos */
+  .manufacturer-logo {
+    @apply grayscale hover:grayscale-0 opacity-60 hover:opacity-80
+           transition-all duration-300;
+  }
+
+  /* Enhanced button styles */
+  .btn-phone {
+    @apply inline-flex items-center gap-2 px-4 py-2 rounded-full
+           border-2 border-[hsl(var(--postal-red))]
+           text-[hsl(var(--postal-red))]
+           hover:bg-[hsl(var(--postal-red))] hover:text-white
+           transition-all duration-200 font-semibold;
+  }
+}

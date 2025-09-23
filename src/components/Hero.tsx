@@ -1,0 +1,83 @@
+import { Phone, Quote } from 'lucide-react';
+import heroImage from '../assets/hero-cbu-installation.jpg';
+
+const Hero = () => {
+  return (
+    <section className="relative pt-24 pb-20 bg-gradient-to-b from-white to-[hsl(var(--secondary))]">
+      <div className="container mx-auto px-4 max-w-[1140px]">
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          {/* Left Column - Content */}
+          <div className="space-y-8">
+            <div>
+              <h1 className="text-4xl md:text-5xl xl:text-6xl font-bold text-[hsl(var(--postal-navy))] mb-6 font-poppins leading-tight">
+                Mailbox Installation,<br />
+                <span className="text-[hsl(var(--postal-red))]">Done Right.</span>
+              </h1>
+              
+              <p className="text-xl text-[hsl(var(--postal-slate))] mb-8 leading-relaxed font-inter">
+                USPS-approved vendor & licensed California contractor serving San Diego County. 
+                We install, repair & upgrade community and commercial mailboxes.
+              </p>
+
+              {/* Trust Badges */}
+              <div className="flex flex-wrap gap-3 mb-8">
+                <span className="trust-badge">
+                  USPS-Approved
+                </span>
+                <span className="trust-badge">
+                  Licensed/Bonded/Insured
+                </span>
+                <span className="trust-badge">
+                  20+ Years Experience
+                </span>
+              </div>
+            </div>
+
+            {/* CTAs */}
+            <div className="flex flex-col sm:flex-row gap-4">
+              <a 
+                href="#contact"
+                className="btn-hero-primary inline-flex items-center justify-center gap-2"
+              >
+                <Quote className="w-5 h-5" />
+                Get a Quote
+              </a>
+              
+              <a 
+                href="tel:6194614787"
+                className="btn-hero-secondary inline-flex items-center justify-center gap-2"
+              >
+                <Phone className="w-5 h-5" />
+                Call Now
+              </a>
+            </div>
+          </div>
+
+          {/* Right Column - Image */}
+          <div className="relative">
+            <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-hero)]">
+              <img 
+                src={heroImage}
+                alt="Professional outdoor community mailbox CBU installation in daylight, showing cluster box units in residential setting"
+                className="w-full h-[500px] object-cover"
+                loading="eager"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[hsl(var(--postal-navy)_/_0.3)] to-transparent"></div>
+            </div>
+            
+            {/* Floating Badge */}
+            <div className="absolute -bottom-6 -left-6 bg-white p-4 rounded-xl shadow-[var(--shadow-card)]">
+              <div className="text-center">
+                <div className="text-2xl font-bold text-[hsl(var(--postal-red))] font-poppins">CSLB</div>
+                <div className="text-sm text-[hsl(var(--postal-slate))] font-semibold">#904106</div>
+                <div className="text-xs text-[hsl(var(--muted-foreground))]">Licensed Contractor</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Hero;
