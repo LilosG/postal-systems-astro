@@ -1,27 +1,46 @@
 ---
 import "../styles/tailwind.css";
-import "@/index.css";
-const { title = "San Diego Commercial Mailbox" } = Astro.props;
+
+const siteName = "San Diego Commercial Mailbox";
+
+export interface Props {
+  title?: string;
+  canonical?: string;
+  description?: string;
+}
+
+const { title = siteName, canonical, description } = Astro.props;
 ---
-import "../styles/tailwind.css";
+
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — San Diego Commercial Mailbox</title>
-    <link rel="canonical" href={new URL(Astro.url.pathname, "https://postalsystemspro.com").href} />
-  { Astro.url.pathname.startsWith("/404") && <meta name="robots" content="noindex, nofollow" /> }
-</head>
+    <title>{title}</title>
+    {canonical && <link rel="canonical" href={canonical} />}
+    {description && <meta name="description" content={description} />}
+  </head>
   <body class="antialiased text-gray-900">
+    <!-- Header -->
     <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-      <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-      <nav><a href="/services" class="px-3">Services</a> <a href="/industries" class="px-3">Industries</a> <a href="/contact" class="px-3">Contact</a></nav>
+      <a href="/" class="font-semibold">{siteName}</a>
+      <nav>
+        <a href="/services" class="px-3">Services</a>
+        <a href="/industries" class="px-3">Industries</a>
+        <a href="/contact" class="px-3">Contact</a>
+      </nav>
     </header>
     <hr />
+
+    <!-- Page content -->
     <main>
       <slot />
     </main>
-    <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
+
+    <!-- Footer -->
+    <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">
+      © {new Date().getFullYear()} {siteName}
+    </footer>
   </body>
 </html>
