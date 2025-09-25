@@ -227,7 +227,7 @@ const Contact = () => {
                 <div className="flex items-start space-x-3">
                   <MapPin className="w-5 h-5 mt-1 text-[hsl(var(--postal-red))]" />
                   <div>
-                    <p className="font-medium font-inter">Postal Systems</p>
+                    <p className="font-medium font-inter">San Diego Commercial Mailbox</p>
                     <p className="text-blue-100 font-inter">San Diego, CA</p>
                   </div>
                 </div>

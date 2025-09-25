@@ -2,12 +2,12 @@
 import Base from "@/layouts/Base.astro";
 
 const services = [
-  { slug: "cluster-box-units", title: "Cluster Box Units (CBUs)", desc: "Turnkey CBU supply, install, and USPS approval for communities and business parks." },
-  { slug: "4c-mailboxes", title: "4C Horizontal Mailboxes", desc: "New 4C mailrooms and retrofits with secure tenant access and parcel lockers." },
-  { slug: "parcel-lockers", title: "Parcel Lockers", desc: "Secure parcel delivery for apartments, offices, and mixed-use properties." },
-  { slug: "pedestal-wall-mounted", title: "Pedestal & Wall-Mounted Boxes", desc: "Neighborhood CBUs, HOA upgrades, wall sets, and replacements." },
-  { slug: "repairs-lock-changes", title: "Repairs & Lock Changes", desc: "USPS-approved maintenance, lock/keying, tenant turnover, and vandalism repair." },
-  { slug: "ada-compliant-installs", title: "ADA-Compliant Installs", desc: "Accessibility-aware layouts and installs that meet USPS and ADA guidelines." }
+  { title: "Cluster Box Units (CBUs)", desc: "Turnkey CBU supply, install, and USPS approval for communities and business parks." },
+  { title: "4C Horizontal Mailboxes", desc: "New 4C mailrooms and retrofits with secure tenant access and parcel lockers." },
+  { title: "Parcel Lockers", desc: "Secure parcel delivery for apartments, offices, and mixed-use properties." },
+  { title: "Pedestal & Wall-Mounted Boxes", desc: "Neighborhood CBUs, HOA upgrades, wall sets, and replacements." },
+  { title: "Repairs & Lock Changes", desc: "USPS-approved maintenance, lock/keying, tenant turnover, and vandalism repair." },
+  { title: "ADA-Compliant Installs", desc: "Accessibility-aware layouts and installs that meet USPS and ADA guidelines." }
 ];
 
 const faqs = [
@@ -29,7 +29,6 @@ const faqs = [
         <div class="rounded-xl border p-5">
           <h3 class="text-lg font-semibold">{s.title}</h3>
           <p class="mt-2 text-sm opacity-80">{s.desc}</p>
-          <a href={`/services/${s.slug}/`} class="mt-3 inline-block rounded-md border px-3 py-1 text-sm">Learn more</a>
         </div>
       ))}
     </div>
@@ -38,7 +37,7 @@ const faqs = [
       <h2 class="text-xl font-semibold">Ready to upgrade your mailboxes?</h2>
       <p class="mt-2 opacity-80">Get a quick site review and quote from a licensed installer.</p>
       <div class="mt-4 flex items-center justify-center gap-3">
-        <a href="/contact" class="rounded-md border px-4 py-2">Get a Quote</a>
+        <a href="/" class="rounded-md border px-4 py-2">Get a Quote</a>
         <a href="tel:+16194601487" class="rounded-md border px-4 py-2">Call Now</a>
       </div>
     </div>
@@ -54,8 +53,7 @@ const faqs = [
         ))}
       </div>
     </div>
-
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://postalsystemspro.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://postalsystemspro.com/services/"}]}</script>
-    <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Commercial Mailbox Installation & Repair","serviceType":"Mailbox installation and repair (CBU, 4C, parcel lockers)","areaServed":{"@type":"AdministrativeArea","name":"San Diego County"},"provider":{"@type":"LocalBusiness","name":"San Diego Commercial Mailbox","telephone":"+1-619-460-1487","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"url":"https://postalsystemspro.com/"},"url":"https://postalsystemspro.com/services/"}</script>
   </section>
 </Base>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://postalsystemspro.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://postalsystemspro.com/services/"}]}</script>

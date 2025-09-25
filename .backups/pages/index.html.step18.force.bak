@@ -4,19 +4,19 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      San Diego Commercial Mailbox | USPS-Approved Mailbox Installation — San Diego
+      Postal Systems | USPS-Approved Mailbox Installation — San Diego
     </title>
     <meta
       name="description"
       content="USPS-approved, licensed contractor installing CBUs, 4C mailboxes & parcel lockers for HOAs, apartments, builders & commercial properties in San Diego County."
     />
-    <meta name="author" content="San Diego Commercial Mailbox" />
+    <meta name="author" content="Postal Systems" />
     <link rel="canonical" href="https://postalsystemspro.com" />
 
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="San Diego Commercial Mailbox | Professional Mailbox Installation"
+      content="Postal Systems | Professional Mailbox Installation"
     />
     <meta
       property="og:description"
@@ -29,7 +29,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="San Diego Commercial Mailbox | Professional Mailbox Installation"
+      content="Postal Systems | Professional Mailbox Installation"
     />
     <meta
       name="twitter:description"
@@ -46,50 +46,10 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "LocalBusiness",
-        "name": "San Diego Commercial Mailbox",
-        "description": "USPS-approved mailbox installation and repair services",
-        "url": "https://postalsystemspro.com",
-        "telephone": "(619) 461-4787",
-        "email": "email@postalsystemspro.com",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "San Diego",
-          "addressRegion": "CA",
-          "addressCountry": "US"
-        },
-        "areaServed": "San Diego County",
-        "serviceType": "Mailbox Installation and Repair",
-        "priceRange": "$$"
-      }
+      {"@context":"https://schema.org","@type":"LocalBusiness","name":"Postal Systems","url":"https://postalsystemspro.com/","telephone":"+1-619-460-1487","description":"Commercial mailbox installation and repair: CBUs, 4C mailboxes, parcel lockers across San Diego County.","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"areaServed":{"@type":"AdministrativeArea","name":"San Diego County"}}
     </script>
 
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "FAQPage",
-        "mainEntity": [
-          {
-            "@type": "Question",
-            "name": "Do you coordinate with USPS?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes—location compliance, clearance, and final inspection."
-            }
-          },
-          {
-            "@type": "Question",
-            "name": "Do you pour pads and set anchors?",
-            "acceptedAnswer": {
-              "@type": "Answer",
-              "text": "Yes—concrete pads, bases, and leveling are included on request."
-            }
-          }
-        ]
-      }
-    </script>
+    
     <script type="module" crossorigin src="/assets/index-RJ4U58x-.js"></script>
     <link rel="stylesheet" crossorigin href="/assets/index-N3m_CGat.css" />
   </head>
