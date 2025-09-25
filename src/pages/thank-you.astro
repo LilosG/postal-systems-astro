@@ -1,31 +1,14 @@
 ---
-const site = "https://postalsystemspro.com";
-const url = `${site}/thank-you/`;
+import Base from "@/layouts/Base.astro";
 ---
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Thank You — San Diego Commercial Mailbox</title>
-    <link rel="canonical" href={url} />
-    <meta name="robots" content="noindex, nofollow" />
-  </head>
-  <body class="antialiased text-gray-900">
-    <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-      <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-      <nav><a href="/services" class="px-3">Services</a></nav>
-    </header>
-    <hr />
-    <main class="mx-auto max-w-6xl py-16">
-      <h1 class="text-3xl font-semibold tracking-tight">Thanks — we’ve got it.</h1>
-      <p class="mt-3 opacity-80">Your message was received. We’ll get back to you shortly.</p>
-
-      <div class="mt-8 flex gap-3">
-        <a href="/" class="rounded-md border px-4 py-2">Back to Home</a>
-        <a href="/services" class="rounded-md border px-4 py-2">View Services</a>
-      </div>
-    </main>
-    <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
-  </body>
-</html>
+<Base title="Thank You — San Diego Commercial Mailbox" canonical="https://postalsystemspro.com/thank-you/">
+  <fragment slot="head"><meta name="robots" content="noindex, nofollow" /></fragment>
+  <section class="mx-auto max-w-6xl py-16">
+    <h1 class="text-3xl font-semibold tracking-tight">Thanks — we’ve got it.</h1>
+    <p class="mt-3 opacity-80">Your message was received. We’ll get back to you shortly.</p>
+    <div class="mt-8 flex gap-3">
+      <a href="/" class="rounded-md border px-4 py-2">Back to Home</a>
+      <a href="/services" class="rounded-md border px-4 py-2">View Services</a>
+    </div>
+  </section>
+</Base>

@@ -1,5 +1,5 @@
 ---
-import "../styles/tailwind.css";
+import "@/styles/tailwind.css";
 
 const siteName = "San Diego Commercial Mailbox";
 
@@ -8,7 +8,6 @@ export interface Props {
   canonical?: string;
   description?: string;
 }
-
 const { title = siteName, canonical, description } = Astro.props;
 ---
 
@@ -20,9 +19,9 @@ const { title = siteName, canonical, description } = Astro.props;
     <title>{title}</title>
     {canonical && <link rel="canonical" href={canonical} />}
     {description && <meta name="description" content={description} />}
+    <slot name="head" />
   </head>
   <body class="antialiased text-gray-900">
-    <!-- Header -->
     <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
       <a href="/" class="font-semibold">{siteName}</a>
       <nav>
@@ -32,13 +31,7 @@ const { title = siteName, canonical, description } = Astro.props;
       </nav>
     </header>
     <hr />
-
-    <!-- Page content -->
-    <main>
-      <slot />
-    </main>
-
-    <!-- Footer -->
+    <main><slot /></main>
     <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">
       © {new Date().getFullYear()} {siteName}
     </footer>

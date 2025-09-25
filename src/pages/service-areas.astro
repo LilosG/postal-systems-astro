@@ -1,35 +1,32 @@
 ---
-const title = 'Service Areas — San Diego Commercial Mailbox';
-const canonical = 'https://postalsystemspro.com/service-areas/';
-const description = 'Commercial mailbox installation and repair across San Diego County.';
-const cities = [
-  { slug: 'san-diego', name: 'San Diego' },
-  { slug: 'la-mesa', name: 'La Mesa' },
-  { slug: 'el-cajon', name: 'El Cajon' },
-  { slug: 'chula-vista', name: 'Chula Vista' },
-  { slug: 'oceanside', name: 'Oceanside' },
-  { slug: 'escondido', name: 'Escondido' },
-  { slug: 'san-marcos', name: 'San Marcos' },
-  { slug: 'carlsbad', name: 'Carlsbad' },
-  { slug: 'poway', name: 'Poway' }
+import Base from "@/layouts/Base.astro";
+
+const areas = [
+  { name: "La Mesa", slug: "la-mesa" },
+  { name: "Chula Vista", slug: "chula-vista" },
+  { name: "El Cajon", slug: "el-cajon" },
+  { name: "Oceanside", slug: "oceanside" },
+  { name: "Escondido", slug: "escondido" },
+  { name: "San Marcos", slug: "san-marcos" },
+  { name: "Carlsbad", slug: "carlsbad" },
+  { name: "Poway", slug: "poway" }
 ];
 ---
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{title}</title>
-<link rel="canonical" href={canonical} />
-<meta name="description" content={description} />
-</head><body class="antialiased text-gray-900">
-<header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-  <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-  <nav><a href="/services" class="px-3">Services</a><a href="/contact" class="px-3">Contact</a></nav>
-</header><hr />
-<main class="mx-auto max-w-6xl py-10">
-  <h1 class="text-3xl font-semibold tracking-tight">Service Areas</h1>
-  <p class="mt-2 opacity-80">We serve San Diego County.</p>
-  <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
-    {cities.map(c => <li class="rounded-xl border p-4"><a class="underline" href={`/service-areas/${c.slug}/`}>{c.name}</a></li>)}
-  </ul>
-</main>
-<footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
-</body></html>
+
+<Base
+  title="Service Areas — San Diego Commercial Mailbox"
+  canonical="https://postalsystemspro.com/service-areas/"
+  description="Commercial mailbox installation and repair across San Diego County."
+>
+  <section class="mx-auto max-w-6xl py-10">
+    <h1 class="text-3xl font-semibold tracking-tight">Service Areas</h1>
+    <p class="mt-2 opacity-80">We serve cities across San Diego County.</p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {areas.map(a => (
+        <li class="rounded-xl border p-4">
+          <a class="font-medium underline" href={`/service-areas/${a.slug}/`}>{a.name}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>
