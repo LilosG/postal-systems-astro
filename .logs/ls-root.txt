@@ -1,0 +1,22 @@
+total 552
+drwxrwxr-x  21 michaelprickett  staff     672 Sep 25 12:52 .
+drwxr-xr-x  10 michaelprickett  staff     320 Sep 23 22:01 ..
+drwxr-xr-x   9 michaelprickett  staff     288 Sep 22 16:36 .astro
+drwxr-xr-x  13 michaelprickett  staff     416 Sep 23 22:18 .git
+-rw-r--r--@  1 michaelprickett  staff      48 Sep 23 11:42 .gitignore
+drwxr-xr-x@  7 michaelprickett  staff     224 Sep 25 12:53 .logs
+-rw-r--r--@  1 michaelprickett  staff       3 Sep 23 12:06 .nvmrc
+-rw-r--r--@  1 michaelprickett  staff      85 Sep 23 14:12 .prettierignore
+-rw-r--r--@  1 michaelprickett  staff      69 Sep 23 14:12 .prettierrc.json
+drwxrwxr-x   4 michaelprickett  staff     128 Sep 22 16:12 .vscode
+-rw-r--r--@  1 michaelprickett  staff     626 Sep 23 14:12 astro.config.mjs
+drwxr-xr-x@ 12 michaelprickett  staff     384 Sep 23 22:15 dist
+drwxr-xr-x@ 34 michaelprickett  staff    1088 Sep 23 22:15 node_modules
+-rw-r--r--@  1 michaelprickett  staff    2332 Sep 23 14:12 package.json
+-rw-r--r--@  1 michaelprickett  staff  240126 Sep 23 14:12 pnpm-lock.yaml
+-rw-r--r--@  1 michaelprickett  staff      97 Sep 23 10:41 pnpm-workspace.yaml
+-rw-r--r--@  1 michaelprickett  staff      89 Sep 23 14:12 postcss.config.mjs
+drwxr-xr-x   8 michaelprickett  staff     256 Sep 23 14:42 public
+-rw-r--r--@  1 michaelprickett  staff    1634 Sep 23 14:12 README.md
+drwxr-xr-x  15 michaelprickett  staff     480 Sep 23 21:29 src
+-rw-r--r--@  1 michaelprickett  staff     477 Sep 23 10:28 tsconfig.json

@@ -54,7 +54,7 @@ const Hero = () => {
           {/* Right Column - Image */}
           <div className="relative">
             <div className="relative rounded-2xl overflow-hidden shadow-[var(--shadow-hero)]">
-              <img width="1200" height="675" loading="eager" fetchpriority="high"
+              <img
                 src={heroImage}
                 alt="Professional outdoor community mailbox CBU installation in daylight, showing cluster box units in residential setting"
                 className="w-full h-[500px] object-cover"

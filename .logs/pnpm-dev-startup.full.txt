@@ -1,0 +1,15 @@
+
+> postal-systems-astro@0.0.1 dev /Users/michaelprickett/Sites/postal-systems-astro
+> astro dev
+
+12:54:30 [types] Generated 1ms
+12:54:30 [content] Syncing content
+12:54:30 [content] Synced content
+12:54:30 [vite] Re-optimizing dependencies because vite config has changed
+
+ astro  v5.13.10 ready in 430 ms
+
+┃ Local    http://localhost:4321/
+┃ Network  use --host to expose
+
+12:54:30 watching for file changes...

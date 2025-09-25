@@ -1,0 +1,10 @@
+Astro                    v5.13.10
+Vite                     v6.3.6
+Node                     v22.19.0
+System                   macOS (x64)
+Package Manager          pnpm
+Output                   static
+Adapter                  none
+Integrations             @astrojs/react
+[?25l[2K[1G[36m?[39m [1mCopy to clipboard?[22m [90m›[39m [90m(Y/n)[39m[2K[1G[2K[1G[32m✔[39m [1mCopy to clipboard?[22m [90m…[39m yes
+[?25hCopied to clipboard!

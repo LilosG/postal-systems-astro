@@ -1,0 +1,11 @@
+src
+src/styles
+src/components
+src/components/ui
+src/layouts
+src/hooks
+src/_legacy
+src/lib
+src/assets
+src/pages
+src/react

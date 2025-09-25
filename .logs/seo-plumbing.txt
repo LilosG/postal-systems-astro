@@ -1,0 +1,23 @@
+=== public/robots.txt ===
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Twitterbot
+Allow: /
+
+User-agent: facebookexternalhit
+Allow: /
+
+User-agent: *
+Allow: /
+
+=== public/sitemap.xml (first 100) ===
+No sitemap.xml
+
+=== Canonical tags ===
+src/_legacy/_index.lovable.html:14:    <link rel="canonical" href="https://postalsystemspro.com" />
+src/_legacy/_index.html.bak:14:    <link rel="canonical" href="https://postalsystemspro.com" />
+src/pages/index.html:14:    <link rel="canonical" href="https://postalsystemspro.com" />

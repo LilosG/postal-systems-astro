@@ -96,7 +96,7 @@ const Services = () => {
                 </div>
 
                 <div className="w-20 h-20 rounded-lg overflow-hidden flex-shrink-0 shadow-sm">
-                  <img width="800" height="533" loading="lazy" decoding="async" fetchpriority="auto"
+                  <img
                     src={service.thumb}
                     alt={service.alt}
                     className="w-full h-full object-cover"

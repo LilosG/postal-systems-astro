@@ -1,0 +1,11 @@
+=== <Image ...> ===
+
+=== <img ...> (raw) ===
+src/components/Hero.tsx:57:              <img
+src/components/Welcome.astro:7:	<img id="background" src={background.src} alt="" fetchpriority="high" />
+src/components/Welcome.astro:11:				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a
+src/components/Services.tsx:99:                  <img
+src/components/FeaturedProjects.tsx:53:                <img
+
+=== width|height present? ===
+src/components/Welcome.astro:11:				><img src={astroLogo.src} width="115" height="48" alt="Astro Homepage" /></a

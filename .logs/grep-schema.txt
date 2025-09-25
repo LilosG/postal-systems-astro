@@ -1,0 +1,19 @@
+=== application/ld+json ===
+src/_legacy/_index.lovable.html:48:    <script type="application/ld+json">
+src/_legacy/_index.lovable.html:69:    <script type="application/ld+json">
+src/_legacy/_index.html.bak:48:    <script type="application/ld+json">
+src/_legacy/_index.html.bak:69:    <script type="application/ld+json">
+src/pages/index.html:48:    <script type="application/ld+json">
+src/pages/index.html:69:    <script type="application/ld+json">
+
+=== schema.org ===
+src/_legacy/_index.lovable.html:50:        "@context": "https://schema.org",
+src/_legacy/_index.lovable.html:71:        "@context": "https://schema.org",
+src/_legacy/_index.html.bak:50:        "@context": "https://schema.org",
+src/_legacy/_index.html.bak:71:        "@context": "https://schema.org",
+src/pages/index.html:50:        "@context": "https://schema.org",
+src/pages/index.html:71:        "@context": "https://schema.org",
+
+=== loose 'schema' mentions ===
+src/pages/index.html:50:        "@context": "https://schema.org",
+src/pages/index.html:71:        "@context": "https://schema.org",
