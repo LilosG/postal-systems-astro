@@ -1,18 +1,15 @@
 ---
 import Base from "../layouts/Base.astro";
-
-const title = "404 — San Diego Commercial Mailbox";
-const description = "Page not found.";
+const title = "Page Not Found | San Diego Commercial Mailbox";
+const description = "Sorry, we can’t find that page.";
 ---
-
-<Base title={title} description={description}>
-  <main class="mx-auto max-w-6xl py-16">
-    <h1 class="text-3xl font-semibold tracking-tight">Page not found</h1>
-    <p class="mt-2 opacity-80">
-      The page you’re looking for doesn’t exist or was moved.
-    </p>
-    <p class="mt-6">
-      <a href="/" class="underline">Return to homepage</a>
-    </p>
-  </main>
+<Base {title} {description}>
+  <h1 class="text-3xl font-semibold mb-4">Page not found</h1>
+  <p class="opacity-80 mb-6">Try one of these pages:</p>
+  <ul class="list-disc pl-5 space-y-2">
+    <li><a class="underline" href="/">Home</a></li>
+    <li><a class="underline" href="/services">Services</a></li>
+    <li><a class="underline" href="/service-areas">Service Areas</a></li>
+    <li><a class="underline" href="/contact">Contact</a></li>
+  </ul>
 </Base>
