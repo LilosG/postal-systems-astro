@@ -4,8 +4,6 @@ import "../styles/tailwind.css";
 const siteName = "San Diego Commercial Mailbox";
 const { title = siteName, description } = Astro.props;
 
-const canonicalBase = "https://sandiegocommercialmailbox.com";
-const canonicalHref = new URL(Astro.url.pathname || "/", canonicalBase).toString();
 ---
 
 <!doctype html>
@@ -14,7 +12,6 @@ const canonicalHref = new URL(Astro.url.pathname || "/", canonicalBase).toString
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <link rel="canonical" href={canonicalHref} />
     {description && <meta name="description" content={description} />}
     <slot name="head" />
   </head>
