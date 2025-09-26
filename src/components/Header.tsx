@@ -68,7 +68,6 @@ const Header = () => {
 
             <button
               className="lg:hidden text-[hsl(var(--postal-navy))]"
-              onClick={() => setIsMenuOpen(!isMenuOpen)}
               aria-label="Toggle mobile menu"
             >
               {isMenuOpen ? (
@@ -89,7 +88,6 @@ const Header = () => {
                   key={item.href}
                   href={item.href}
                   className="text-[hsl(var(--postal-slate))] hover:text-[hsl(var(--postal-navy))] font-medium py-2 font-inter"
-                  onClick={() => setIsMenuOpen(false)}
                 >
                   {item.label}
                 </a>
