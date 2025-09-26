@@ -4,7 +4,7 @@ const MobileCTABar = () => {
   return (
     <div className="mobile-cta-bar">
       <a
-        href="#contact"
+        href="/contact"
         className="btn-hero-primary flex-1 justify-center min-h-[44px]"
       >
         <Quote className="w-5 h-5" />

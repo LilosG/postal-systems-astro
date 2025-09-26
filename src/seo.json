@@ -1,0 +1,110 @@
+{
+  "/404/": {
+    "title": "404 — San Diego Commercial Mailbox",
+    "description": "Commercial mailbox services, installs and maintenance."
+  },
+  "/contact/": {
+    "title": "Contact — San Diego Commercial Mailbox",
+    "description": "Contact San Diego Commercial Mailbox for quotes and scheduling."
+  },
+  "/industries/commercial/": {
+    "title": "Commercial — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/industries/developers/": {
+    "title": "Developers — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/industries/hoa/": {
+    "title": "Hoa — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/industries/": {
+    "title": "Industries — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/industries/office/": {
+    "title": "Office — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/industries/property-managers/": {
+    "title": "Property Managers — San Diego Commercial Mailbox",
+    "description": "Solutions, programs and workflows tailored to this customer type."
+  },
+  "/service-areas/carlsbad/": {
+    "title": "Mailbox Services in Carlsbad — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/chula-vista/": {
+    "title": "Mailbox Services in Chula Vista — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/el-cajon/": {
+    "title": "Mailbox Services in El Cajon — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/escondido/": {
+    "title": "Mailbox Services in Escondido — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/la-mesa/": {
+    "title": "Mailbox Services in La Mesa — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/oceanside/": {
+    "title": "Mailbox Services in Oceanside — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/poway/": {
+    "title": "Mailbox Services in Poway — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/san-diego/": {
+    "title": "Mailbox Services in San Diego — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/san-marcos/": {
+    "title": "Mailbox Services in San Marcos — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/service-areas/": {
+    "title": "Service Areas — San Diego Commercial Mailbox",
+    "description": "CBU and 4C installs, parcel lockers, repairs and maintenance in this area."
+  },
+  "/services/4c-mailboxes/": {
+    "title": "4c Mailboxes — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/ada-compliant-installs/": {
+    "title": "Ada Compliant Installs — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/cluster-box-units/": {
+    "title": "Cluster Box Units — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/maintenance/": {
+    "title": "Maintenance — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/parcel-lockers/": {
+    "title": "Parcel Lockers — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/pedestal-wall-mounted/": {
+    "title": "Pedestal Wall Mounted — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/repairs-lock-changes/": {
+    "title": "Repairs Lock Changes — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/services/": {
+    "title": "Services — San Diego Commercial Mailbox",
+    "description": "Details, scope and process for this mailbox service. Request a quote today."
+  },
+  "/thank-you/": {
+    "title": "Thank You — San Diego Commercial Mailbox",
+    "description": "Thank you for contacting San Diego Commercial Mailbox."
+  }
+}

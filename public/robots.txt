@@ -13,4 +13,4 @@ Allow: /
 User-agent: *
 Allow: /
 
-Sitemap: https://postalsystemspro.com/sitemap.xml
+Sitemap: https://sandiegocommercialmailbox.com/sitemap.xml

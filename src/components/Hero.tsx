@@ -34,7 +34,7 @@ const Hero = () => {
             {/* CTAs */}
             <div className="flex flex-col sm:flex-row gap-4">
               <a
-                href="#contact"
+                href="/contact"
                 className="btn-hero-primary inline-flex items-center justify-center gap-2"
               >
                 <Quote className="w-5 h-5" />

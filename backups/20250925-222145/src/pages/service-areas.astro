@@ -1,0 +1,32 @@
+---
+import Base from "@/layouts/Base.astro";
+
+const areas = [
+  { name: "La Mesa", slug: "la-mesa" },
+  { name: "Chula Vista", slug: "chula-vista" },
+  { name: "El Cajon", slug: "el-cajon" },
+  { name: "Oceanside", slug: "oceanside" },
+  { name: "Escondido", slug: "escondido" },
+  { name: "San Marcos", slug: "san-marcos" },
+  { name: "Carlsbad", slug: "carlsbad" },
+  { name: "Poway", slug: "poway" }
+];
+---
+
+<Base
+  title="Service Areas — San Diego Commercial Mailbox"
+  canonical="https://sandiegocommercialmailbox.com/service-areas/"
+  description="Commercial mailbox installation and repair across San Diego County."
+>
+  <section class="mx-auto max-w-6xl py-10">
+    <h1 class="text-3xl font-semibold tracking-tight">Service Areas</h1>
+    <p class="mt-2 opacity-80">We serve cities across San Diego County.</p>
+    <ul class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
+      {areas.map(a => (
+        <li class="rounded-xl border p-4">
+          <a class="font-medium underline" href={`/service-areas/${a.slug}/`}>{a.name}</a>
+        </li>
+      ))}
+    </ul>
+  </section>
+</Base>

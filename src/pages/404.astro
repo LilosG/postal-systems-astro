@@ -1,11 +1,14 @@
 ---
-import Base from "../layouts/Base.astro";
+import Base from "@/layouts/Base.astro";
 
 const title = "404 — San Diego Commercial Mailbox";
 const description = "Page not found.";
 ---
 
 <Base title={title} description={description}>
+  <Fragment slot="head">
+    <meta name="description" content="Commercial mailbox services, installs and maintenance." />
+  </Fragment>
   <main class="mx-auto max-w-6xl py-16">
     <h1 class="text-3xl font-semibold tracking-tight">Page not found</h1>
     <p class="mt-2 opacity-80">
