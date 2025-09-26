@@ -1,0 +1,36 @@
+---
+import "../styles/tailwind.css";
+
+const siteName = "San Diego Commercial Mailbox";
+const { title = siteName, description } = Astro.props;
+
+const canonicalBase = "https://sandiegocommercialmailbox.com";
+const canonicalHref = new URL(Astro.url.pathname || "/", canonicalBase).toString();
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <link rel="canonical" href={canonicalHref} />
+    {description && <meta name="description" content={description} />}
+    <slot name="head" />
+  </head>
+  <body class="antialiased text-gray-900">
+    <header class="mx-auto max-w-6xl flex items-center justify-between py-4 px-4 sm:px-6 lg:px-8">
+      <a href="/" class="font-semibold">{siteName}</a>
+      <nav class="flex items-center gap-3">
+        <a href="/services" class="px-3">Services</a>
+        <a href="/industries" class="px-3">Industries</a>
+        <a href="/contact" class="px-3">Contact</a>
+      </nav>
+    </header>
+    <hr />
+    <main class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8"><slot /></main>
+    <footer class="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8 py-10 text-sm opacity-70">
+      © {new Date().getFullYear()} {siteName}
+    </footer>
+  </body>
+</html>
