@@ -1,25 +1,32 @@
 ---
-import "@/index.css";
-const { title = "San Diego Commercial Mailbox" } = Astro.props;
+import "../styles/tailwind.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const {
+  title = "San Diego Commercial Mailbox",
+  description = "Commercial mailbox and home-service solutions.",
+  canonical,
+  jsonLd
+} = Astro.props;
+
+const url = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined);
 ---
 <!doctype html>
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>{title} — San Diego Commercial Mailbox</title>
-    <link rel="canonical" href={new URL(Astro.url.pathname, "https://postalsystemspro.com").href} />
-  { Astro.url.pathname.startsWith("/404") && <meta name="robots" content="noindex, nofollow" /> }
-</head>
-  <body class="antialiased text-gray-900">
-    <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-      <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-      <nav><a href="/services" class="px-3">Services</a> <a href="/industries" class="px-3">Industries</a> <a href="/contact" class="px-3">Contact</a></nav>
-    </header>
-    <hr />
-    <main>
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {url && <link rel="canonical" href={url} />}
+    {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+  </head>
+  <body class="min-h-screen bg-white text-gray-900 antialiased">
+    <Header />
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
       <slot />
     </main>
-    <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
+    <Footer />
   </body>
 </html>

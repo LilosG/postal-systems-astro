@@ -1,4 +1,10 @@
 ---
+import Base from "../../layouts/Base.astro";
+const title = "El Cajon" && "El Cajon" !== "Index" ? "El Cajon | San Diego Commercial Mailbox" : "San Diego Commercial Mailbox";
+const description = "Local page using the unified site layout.";
+---
+<Base {title} {description}>
+---
 const title = 'Mailbox Installation — El Cajon, CA';
 const description = 'CBUs, 4C mailboxes, parcel lockers, repairs, and ADA-compliant installs in El Cajon.';
 ---
@@ -8,10 +14,6 @@ const description = 'CBUs, 4C mailboxes, parcel lockers, repairs, and ADA-compli
 <link rel="canonical" href="https://postalsystemspro.com/service-areas/el-cajon/" />
 <meta name="description" content={description} />
 </head><body class="antialiased text-gray-900">
-<header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-  <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-  <nav><a href="/services" class="px-3">Services</a><a href="/contact" class="px-3">Contact</a></nav>
-</header><hr />
 <main class="mx-auto max-w-6xl py-10">
   <h1 class="text-3xl font-semibold tracking-tight">El Cajon Mailbox Services</h1>
   <p class="mt-2 opacity-80">USPS-approved installation and repair for HOAs, apartments, and businesses.</p>
@@ -25,3 +27,4 @@ const description = 'CBUs, 4C mailboxes, parcel lockers, repairs, and ADA-compli
 </main>
 <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
 </body></html>
+</Base>

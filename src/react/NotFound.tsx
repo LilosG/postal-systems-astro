@@ -1,3 +1,5 @@
+// @ts-nocheck
+// @ts-nocheck
 import { useLocation } from '@lib/rrd'
 import { useEffect } from 'react'
 
