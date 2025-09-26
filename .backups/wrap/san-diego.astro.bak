@@ -1,9 +1,7 @@
 ---
-import Base from "@/layouts/Base.astro";
 const title = 'Mailbox Installation — San Diego, CA';
 const description = 'CBUs, 4C mailboxes, parcel lockers, repairs, and ADA-compliant installs in San Diego.';
 ---
-<Base>
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
@@ -27,5 +25,3 @@ const description = 'CBUs, 4C mailboxes, parcel lockers, repairs, and ADA-compli
 </main>
 <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
 </body></html>
-
-</Base>

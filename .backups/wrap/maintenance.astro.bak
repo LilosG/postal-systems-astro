@@ -1,10 +1,8 @@
 ---
-import Base from "@/layouts/Base.astro";
 const title = 'Mailbox Service & Maintenance — San Diego Commercial Mailbox';
 const canonical = 'https://postalsystemspro.com/services/maintenance/';
 const description = 'On-site repair, lock changes, vandalism repair, door alignment, re-anchoring, and preventative maintenance for commercial CBUs, 4C mailboxes, and parcel lockers across San Diego County.';
 ---
-<Base>
 <!doctype html><html lang="en"><head>
 <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 <title>{title}</title>
@@ -81,5 +79,3 @@ const description = 'On-site repair, lock changes, vandalism repair, door alignm
 
 <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
 </body></html>
-
-</Base>
