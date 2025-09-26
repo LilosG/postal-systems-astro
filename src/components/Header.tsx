@@ -38,7 +38,7 @@ const Header = () => {
             </div>
             <div>
               <h1 className="text-xl font-bold text-[hsl(var(--postal-navy))] font-poppins">
-                Postal Systems
+                San Diego Commercial Mailbox
               </h1>
               <p className="text-xs text-[hsl(var(--postal-slate))] -mt-1">
                 USPS-Approved Installation

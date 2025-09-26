@@ -20,7 +20,7 @@ const Footer = () => {
               <Mail className="w-5 h-5 text-white" />
             </div>
             <div>
-              <h3 className="text-lg font-bold">Postal Systems</h3>
+              <h3 className="text-lg font-bold">San Diego Commercial Mailbox</h3>
               <p className="text-xs text-gray-300 -mt-1">
                 USPS-Approved Installation
               </p>
@@ -50,7 +50,7 @@ const Footer = () => {
         {/* Copyright Line */}
         <div className="border-t border-gray-600 mt-6 pt-4 text-center">
           <p className="text-xs text-gray-400">
-            © 2024 Postal Systems. All rights reserved.
+            © 2024 San Diego Commercial Mailbox. All rights reserved.
           </p>
         </div>
       </div>

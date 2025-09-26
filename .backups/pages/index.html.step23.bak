@@ -4,15 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      San Diego Commercial Mailbox | USPS-Approved Mailbox Installation — San Diego
+      Postal Systems | USPS-Approved Mailbox Installation — San Diego
     </title>
-    <meta name="author" content="San Diego Commercial Mailbox" />
+    <meta name="author" content="Postal Systems" />
     <link rel="canonical" href="https://postalsystemspro.com" />
 
     <!-- Open Graph -->
     <meta
       property="og:title"
-      content="San Diego Commercial Mailbox | Professional Mailbox Installation"
+      content="Postal Systems | Professional Mailbox Installation"
     />
     <meta
       property="og:description"
@@ -25,7 +25,7 @@
     <meta name="twitter:card" content="summary_large_image" />
     <meta
       name="twitter:title"
-      content="San Diego Commercial Mailbox | Professional Mailbox Installation"
+      content="Postal Systems | Professional Mailbox Installation"
     />
     <meta
       name="twitter:description"
@@ -42,7 +42,7 @@
 
     <!-- Structured Data -->
     <script type="application/ld+json">
-      {"@context":"https://schema.org","@type":"LocalBusiness","name":"San Diego Commercial Mailbox","url":"https://postalsystemspro.com/","telephone":"+1-619-460-1487","description":"Commercial mailbox installation and repair: CBUs, 4C mailboxes, parcel lockers across San Diego County.","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"areaServed":{"@type":"AdministrativeArea","name":"San Diego County"}}
+      {"@context":"https://schema.org","@type":"LocalBusiness","name":"Postal Systems","url":"https://postalsystemspro.com/","telephone":"+1-619-460-1487","description":"Commercial mailbox installation and repair: CBUs, 4C mailboxes, parcel lockers across San Diego County.","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"areaServed":{"@type":"AdministrativeArea","name":"San Diego County"}}
     </script>
 
     
@@ -52,14 +52,6 @@
 </head>
 
   <body>
-  <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-    <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-    <nav><a href="/services" class="px-3">Services</a> <a href="/contact" class="px-3">Contact</a> <a href="/industries" class="px-3">Industries</a></nav>
-  </header>
-  <hr>
-
     <div id="root"></div>
-  
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"San Diego Commercial Mailbox","url":"https://postalsystemspro.com/","inLanguage":"en-US"}</script>
-</body>
+  </body>
 </html>

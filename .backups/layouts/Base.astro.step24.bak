@@ -1,0 +1,25 @@
+---
+import "@/index.css";
+const { title = "Postal Systems" } = Astro.props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title} — Postal Systems</title>
+    <link rel="canonical" href={new URL(Astro.url.pathname, "https://postalsystemspro.com").href} />
+  { Astro.url.pathname.startsWith("/404") && <meta name="robots" content="noindex, nofollow" /> }
+</head>
+  <body class="antialiased text-gray-900">
+    <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
+      <a href="/" class="font-semibold">Postal Systems</a>
+      <nav><a href="/services" class="px-3">Services</a></nav>
+    </header>
+    <hr />
+    <main>
+      <slot />
+    </main>
+    <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 Postal Systems</footer>
+  </body>
+</html>
