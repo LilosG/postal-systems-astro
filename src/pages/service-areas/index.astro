@@ -1,0 +1,33 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Service Areas | San Diego Commercial Mailbox";
+const description = "Find coverage by city and region.";
+const url = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "CollectionPage",
+  "name": "Service Areas",
+  "url": url,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site ? new URL("/", Astro.site).toString() : "/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas" }
+    ]
+  }
+};
+---
+
+<Base {title} {description} jsonLd={jsonLd}>
+  <h1 class="text-3xl font-semibold mb-6">Service Areas</h1>
+  <p class="mb-8 opacity-80">Browse our current coverage. Each area page uses the unified layout and header.</p>
+
+  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="/service-areas/jupiter-fl" class="block rounded-xl border p-6 hover:shadow-md transition">
+      <h2 class="text-lg font-medium mb-2">Jupiter, FL</h2>
+      <p class="text-sm opacity-80 mb-4">Residential and commercial services.</p>
+      <span class="inline-flex rounded-lg px-3 py-2 text-sm bg-gray-900 text-white">View area</span>
+    </a>
+  </div>
+</Base>

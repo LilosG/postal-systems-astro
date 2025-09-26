@@ -1,0 +1,51 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Service Area: Jupiter, FL | San Diego Commercial Mailbox";
+const description = "Service coverage and offerings for Jupiter, FL.";
+const url = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "WebPage",
+  "name": "Service Area: Jupiter, FL",
+  "url": url,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site ? new URL("/", Astro.site).toString() : "/" },
+      { "@type": "ListItem", "position": 2, "name": "Service Areas", "item": Astro.site ? new URL("/service-areas", Astro.site).toString() : "/service-areas" },
+      { "@type": "ListItem", "position": 3, "name": "Jupiter, FL", "item": url }
+    ]
+  }
+};
+---
+
+<Base {title} {description} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm">
+    <a href="/" class="opacity-70 hover:opacity-100">Home</a>
+    <span class="px-2">/</span>
+    <a href="/service-areas" class="opacity-70 hover:opacity-100">Service Areas</a>
+    <span class="px-2">/</span>
+    <span class="opacity-100">Jupiter, FL</span>
+  </nav>
+
+  <h1 class="text-3xl font-semibold mb-4">Jupiter, FL</h1>
+  <p class="mb-8 opacity-80">Proudly serving residential and commercial customers in Jupiter, FL.</p>
+
+  <div class="grid gap-8 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="text-xl font-medium mb-3">Popular services in Jupiter</h2>
+      <ul class="list-disc pl-5 space-y-2 mb-6">
+        <li><a class="underline" href="/services/water-damage-restoration">Water Damage Restoration</a></li>
+        <li><a class="underline" href="/services">All Services</a></li>
+      </ul>
+      <p class="opacity-80">Looking for another area? See all <a class="underline" href="/service-areas">service areas</a>.</p>
+    </div>
+
+    <aside class="rounded-xl border p-6">
+      <div class="text-lg font-medium mb-2">Get a local quote</div>
+      <p class="text-sm opacity-80 mb-4">Fast scheduling in Jupiter.</p>
+      <a href="/contact" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-gray-900 text-white hover:opacity-90">Request Quote</a>
+    </aside>
+  </div>
+</Base>
