@@ -87,7 +87,7 @@ const Services = () => {
           {services.map((service, index) => (
             <a
               key={index}
-              href="#contact"
+              href="/contact"
               className="card-service group cursor-pointer h-full flex flex-col"
             >
               <div className="flex items-start justify-between mb-4">

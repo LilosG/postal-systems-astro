@@ -1,0 +1,8 @@
+src/pages/industries/commercial.astro
+src/pages/industries/developers.astro
+src/pages/industries/hoa.astro
+src/pages/industries/index.astro
+src/pages/industries/office.astro
+src/pages/industries/property-managers.astro
+src/pages/service-areas/san-diego.astro
+src/pages/services/maintenance.astro

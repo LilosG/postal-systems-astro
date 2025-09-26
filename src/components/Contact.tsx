@@ -235,10 +235,10 @@ const Contact = () => {
                 <div className="flex items-center space-x-3">
                   <Mail className="w-5 h-5 text-[hsl(var(--postal-red))]" />
                   <a
-                    href="mailto:email@postalsystemspro.com"
+                    href="mailto:email@sandiegocommercialmailbox.com"
                     className="hover:text-blue-200 font-inter"
                   >
-                    email@postalsystemspro.com
+                    email@sandiegocommercialmailbox.com
                   </a>
                 </div>
 

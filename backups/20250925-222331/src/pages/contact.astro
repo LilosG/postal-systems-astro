@@ -1,0 +1,48 @@
+---
+import Base from "@/layouts/Base.astro";
+---
+<Base
+  title="Contact — San Diego Commercial Mailbox"
+  canonical="https://sandiegocommercialmailbox.com/contact/"
+  description="Contact San Diego Commercial Mailbox for commercial mailbox installation and repair in San Diego County. Call (619) 460-1487 or request a quote."
+>
+  <section class="mx-auto max-w-6xl py-16">
+    <h1 class="text-3xl font-semibold tracking-tight">Contact</h1>
+    <p class="mt-3 opacity-80">San Diego’s commercial mailbox installer. Call or send a quick request.</p>
+
+    <div class="mt-6 grid gap-8 md:grid-cols-2">
+      <section class="rounded-xl border p-6">
+        <h2 class="text-xl font-semibold">Call or Email</h2>
+        <div class="mt-3 space-y-2">
+          <p><a href="tel:+16194601487" class="underline">(619) 460-1487</a></p>
+          <p><a href="mailto:hello@sandiegocommercialmailbox.com" class="underline">hello@sandiegocommercialmailbox.com</a></p>
+        </div>
+        <p class="mt-4 text-sm opacity-80">Hours: Mon–Fri, 8:00a–5:00p PT</p>
+      </section>
+
+      <section class="rounded-xl border p-6">
+        <h2 class="text-xl font-semibold">Request a Quote</h2>
+        <form class="mt-4 space-y-3" method="get" action="/thank-you/">
+          <label class="block">
+            <span class="text-sm">Name</span>
+            <input name="name" required class="mt-1 w-full rounded-md border px-3 py-2" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Email</span>
+            <input type="email" name="email" required class="mt-1 w-full rounded-md border px-3 py-2" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Phone</span>
+            <input type="tel" name="phone" class="mt-1 w-full rounded-md border px-3 py-2" />
+          </label>
+          <label class="block">
+            <span class="text-sm">Project details</span>
+            <textarea name="message" rows="4" class="mt-1 w-full rounded-md border px-3 py-2"></textarea>
+          </label>
+          <button type="submit" class="rounded-md border px-4 py-2">Send</button>
+        </form>
+        <p class="mt-2 text-xs opacity-70">This placeholder form redirects to the thank-you page. We’ll wire a real handler later.</p>
+      </section>
+    </div>
+  </section>
+</Base>

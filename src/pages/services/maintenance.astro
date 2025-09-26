@@ -1,16 +1,15 @@
 ---
 import Base from "@/layouts/Base.astro";
-const title = 'Mailbox Service & Maintenance — San Diego Commercial Mailbox';
-const canonical = 'https://postalsystemspro.com/services/maintenance/';
-const description = 'On-site repair, lock changes, vandalism repair, door alignment, re-anchoring, and preventative maintenance for commercial CBUs, 4C mailboxes, and parcel lockers across San Diego County.';
+const title = "{title}";
 ---
-<Base>
-<!doctype html><html lang="en"><head>
-<meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>{title}</title>
-<link rel="canonical" href={canonical} />
-<meta name="description" content={description} />
-</head><body class="antialiased text-gray-900">
+<Base title={title}>
+  <Fragment slot="head">
+    <meta name="description" content="Details, scope and process for this mailbox service. Request a quote today." />
+  </Fragment>
+  <main class="mx-auto max-w-6xl px-6 py-12">
+
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sandiegocommercialmailbox.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://sandiegocommercialmailbox.com/services/"},{"@type":"ListItem","position":3,"name":"Service & Maintenance","item":"https://sandiegocommercialmailbox.com/services/maintenance/"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Commercial Mailbox Service & Maintenance","serviceType":"Repair, re-keying, vandalism remediation, preventative maintenance","areaServed":{"@type":"AdministrativeArea","name":"San Diego County"},"provider":{"@type":"LocalBusiness","name":"San Diego Commercial Mailbox","telephone":"+1-619-460-1487","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"url":"https://sandiegocommercialmailbox.com/"},"url":"https://sandiegocommercialmailbox.com/services/maintenance/"}</script>
 <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
   <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
   <nav><a href="/services" class="px-3">Services</a><a href="/contact" class="px-3">Contact</a></nav>
@@ -75,11 +74,10 @@ const description = 'On-site repair, lock changes, vandalism repair, door alignm
     </div>
   </section>
 
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://postalsystemspro.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://postalsystemspro.com/services/"},{"@type":"ListItem","position":3,"name":"Service & Maintenance","item":"https://postalsystemspro.com/services/maintenance/"}]}</script>
-  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Commercial Mailbox Service & Maintenance","serviceType":"Repair, re-keying, vandalism remediation, preventative maintenance","areaServed":{"@type":"AdministrativeArea","name":"San Diego County"},"provider":{"@type":"LocalBusiness","name":"San Diego Commercial Mailbox","telephone":"+1-619-460-1487","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"url":"https://postalsystemspro.com/"},"url":"https://postalsystemspro.com/services/maintenance/"}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://sandiegocommercialmailbox.com/"},{"@type":"ListItem","position":2,"name":"Services","item":"https://sandiegocommercialmailbox.com/services/"},{"@type":"ListItem","position":3,"name":"Service & Maintenance","item":"https://sandiegocommercialmailbox.com/services/maintenance/"}]}</script>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"Service","name":"Commercial Mailbox Service & Maintenance","serviceType":"Repair, re-keying, vandalism remediation, preventative maintenance","areaServed":{"@type":"AdministrativeArea","name":"San Diego County"},"provider":{"@type":"LocalBusiness","name":"San Diego Commercial Mailbox","telephone":"+1-619-460-1487","address":{"@type":"PostalAddress","addressLocality":"San Diego","addressRegion":"CA","addressCountry":"US"},"url":"https://sandiegocommercialmailbox.com/"},"url":"https://sandiegocommercialmailbox.com/services/maintenance/"}</script>
 </main>
 
 <footer class="mx-auto max-w-6xl py-10 text-sm opacity-70">© 2025 San Diego Commercial Mailbox</footer>
-</body></html>
-
+  </main>
 </Base>

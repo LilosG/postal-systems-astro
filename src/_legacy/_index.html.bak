@@ -11,7 +11,7 @@
       content="USPS-approved, licensed contractor installing CBUs, 4C mailboxes & parcel lockers for HOAs, apartments, builders & commercial properties in San Diego County."
     />
     <meta name="author" content="San Diego Commercial Mailbox" />
-    <link rel="canonical" href="https://postalsystemspro.com" />
+    <link rel="canonical" href="https://sandiegocommercialmailbox.com" />
 
     <!-- Open Graph -->
     <meta
@@ -23,7 +23,7 @@
       content="USPS-approved mailbox installation and repair services for San Diego County communities and commercial properties."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://postalsystemspro.com" />
+    <meta property="og:url" content="https://sandiegocommercialmailbox.com" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -51,9 +51,9 @@
         "@type": "LocalBusiness",
         "name": "San Diego Commercial Mailbox",
         "description": "USPS-approved mailbox installation and repair services",
-        "url": "https://postalsystemspro.com",
+        "url": "https://sandiegocommercialmailbox.com",
         "telephone": "(619) 461-4787",
-        "email": "email@postalsystemspro.com",
+        "email": "email@sandiegocommercialmailbox.com",
         "address": {
           "@type": "PostalAddress",
           "addressLocality": "San Diego",
