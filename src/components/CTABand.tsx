@@ -21,7 +21,7 @@ const CTABand = () => {
 
         <div className="flex flex-col sm:flex-row gap-4 justify-center mb-6">
           <a
-            href="#contact"
+            href="/contact"
             className="inline-flex items-center justify-center gap-2 bg-white text-[hsl(var(--postal-navy))] px-8 py-4 rounded-xl font-semibold hover:bg-white/90 transition-colors shadow-lg min-h-[44px]"
           >
             <Quote className="w-5 h-5" />
