@@ -2,22 +2,20 @@
 import Base from "../../layouts/Base.astro";
 
 const title = "Services | San Diego Commercial Mailbox";
-const description = "Full-stack commercial mailbox installs, maintenance, and related services.";
+const description = "USPS-compliant mailbox installation, repairs, and maintenance across San Diego County.";
 
-const files = Object.keys(import.meta.glob('./*.astro'));
-const services = files
-  .filter((p) => !p.endsWith('index.astro'))
-  .map((p) => {
-    const slug = p.replace('./', '').replace('.astro', '');
-    const label = slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-    return { href: `/services/${slug}`, label };
-  })
-  .sort((a,b) => a.label.localeCompare(b.label));
+const services = [
+  { href: "/services/cluster-box-units", label: "Cluster Box Units (CBUs)" },
+  { href: "/services/4c-mailboxes", label: "4C Mailboxes" },
+  { href: "/services/pedestal-wall-mounted", label: "Pedestal & Wall-Mounted Mailboxes" },
+  { href: "/services/parcel-lockers", label: "Parcel Lockers" },
+  { href: "/services/repairs-lock-changes", label: "Repairs & Lock Changes" },
+  { href: "/services/maintenance", label: "Maintenance & Compliance" }
+];
 ---
 <Base {title} {description}>
   <h1 class="text-3xl font-semibold mb-6">Services</h1>
-  <p class="mb-8 opacity-80">Choose a service below. Each page uses the same layout, header, and footer for visual consistency.</p>
-  <div class="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
     {services.map((s) => (
       <a href={s.href} class="block rounded-xl border p-6 hover:shadow-md transition">
         <h2 class="text-lg font-medium mb-2">{s.label}</h2>

@@ -1,18 +1,15 @@
 ---
 import Base from "../../layouts/Base.astro";
+import { getCollection } from "astro:content";
 
 const title = "Service Areas | San Diego Commercial Mailbox";
 const description = "Browse our current coverage by city and region.";
 
-const files = Object.keys(import.meta.glob('./*.astro'));
-const areas = files
-  .filter((p) => !p.endsWith('index.astro'))
-  .map((p) => {
-    const slug = p.replace('./', '').replace('.astro', '');
-    const label = slug.split('-').map(s => s.charAt(0).toUpperCase() + s.slice(1)).join(' ');
-    return { href: `/service-areas/${slug}`, label };
-  })
-  .sort((a,b) => a.label.localeCompare(b.label));
+type AreaEntry = { slug: string; data: { title: string } };
+const entries = await getCollection('areas') as AreaEntry[];
+const areas = entries
+  .map((e) => ({ href: `/service-areas/${e.slug}`, label: e.data.title }))
+  .sort((a, b) => a.label.localeCompare(b.label));
 ---
 <Base {title} {description}>
   <h1 class="text-3xl font-semibold mb-6">Service Areas</h1>

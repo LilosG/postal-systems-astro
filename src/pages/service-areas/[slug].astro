@@ -1,0 +1,41 @@
+---
+import Base from "../../layouts/Base.astro";
+import Breadcrumbs from "../../components/Breadcrumbs.astro";
+import { getCollection } from "astro:content";
+
+export async function getStaticPaths() {
+  const areas = await getCollection('areas') as Array<{ slug: string }>;
+  return areas.map((e: { slug: string }) => ({ params: { slug: e.slug } }));
+}
+
+interface AreaData { title: string; description: string; city: string; state: string }
+const { slug = "" } = Astro.params as { slug?: string };
+
+const all = await getCollection('areas') as Array<{ slug: string; body: string; data: AreaData }>;
+const entry = all.find((e) => e.slug === slug);
+if (!entry) throw new Error(`Service area not found: ${slug}`);
+
+const cityState = `${entry.data.city}, ${entry.data.state}`;
+const title = `${entry.data.title} | San Diego Commercial Mailbox`;
+const description = entry.data.description;
+const pageUrl = `https://postalsystemspro.com/service-areas/${slug}/`;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "San Diego Commercial Mailbox",
+  "areaServed": cityState,
+  "address": { "@type": "PostalAddress", "addressLocality": entry.data.city, "addressRegion": entry.data.state, "addressCountry": "US" },
+  "url": pageUrl
+};
+const crumbs = [
+  { href: "/", label: "Home" },
+  { href: "/service-areas", label: "Service Areas" },
+  { label: entry.data.title }
+];
+---
+<Base {title} {description} jsonLd={jsonLd}>
+  <Breadcrumbs items={crumbs} />
+  <h1 class="text-3xl font-semibold mb-4">{entry.data.title}</h1>
+  <p class="opacity-80 mb-8">{entry.data.description}</p>
+  <article class="prose max-w-none" set:html={entry.body} />
+</Base>

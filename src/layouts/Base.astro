@@ -1,32 +1,81 @@
 ---
-import "../styles/tailwind.css";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
+import "../styles/global.css";
+
+interface BaseProps {
+  title?: string;
+  description?: string;
+  /** JSON-LD object or array of objects to embed on the page */
+  jsonLd?: Record<string, any> | Array<Record<string, any>>;
+}
 
 const {
   title = "San Diego Commercial Mailbox",
-  description = "Commercial mailbox and home-service solutions.",
-  canonical,
+  description = "USPS-approved mailbox installation, repairs, and maintenance across San Diego County.",
   jsonLd
-} = Astro.props;
+} = Astro.props as BaseProps;
 
-const url = canonical ?? (Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined);
+const siteUrl = "https://postalsystemspro.com";
+const canonical = new URL(Astro.url.pathname, siteUrl).toString();
+
+const jsonLdList: Array<Record<string, any>> =
+  Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
 ---
-<!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <title>{title}</title>
-    {description && <meta name="description" content={description} />}
-    {url && <link rel="canonical" href={url} />}
-    {jsonLd && <script is:inline type="application/ld+json" set:html={JSON.stringify(jsonLd)} />}
+    <meta name="description" content={description} />
+
+    <link rel="canonical" href={canonical} />
+    <meta property="og:title" content={title} />
+    <meta property="og:description" content={description} />
+    <meta property="og:url" content={canonical} />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    {jsonLdList.map((block) => (
+      <script type="application/ld+json" set:html={JSON.stringify(block)} />
+    ))}
   </head>
+
   <body class="min-h-screen bg-white text-gray-900 antialiased">
-    <Header />
-    <main class="container mx-auto px-4 sm:px-6 lg:px-8 py-10">
+    {/* Header */}
+    <header class="border-b">
+      <div class="mx-auto max-w-6xl px-4 py-4 flex items-center justify-between gap-4">
+        <a href="/" class="flex items-center gap-3 font-semibold text-lg">
+          <span class="inline-flex h-9 w-9 items-center justify-center rounded-lg bg-gray-900 text-white">📬</span>
+          <span>Postal Systems</span>
+        </a>
+
+        <nav class="flex items-center gap-5 text-sm">
+          <a href="/" class="hover:opacity-80">Home</a>
+          <a href="/services" class="hover:opacity-80">Services</a>
+          <a href="/service-areas" class="hover:opacity-80">Service Areas</a>
+          <a href="/about" class="hover:opacity-80">About</a>
+          <a href="/contact" class="hover:opacity-80">Contact</a>
+          <a href="/contact" class="inline-flex items-center rounded-lg px-3 py-1.5 bg-gray-900 text-white">Get Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    {/* Main */}
+    <main class="mx-auto max-w-6xl px-4 py-10">
       <slot />
     </main>
-    <Footer />
+
+    {/* Footer */}
+    <footer class="mt-16 border-t">
+      <div class="mx-auto max-w-6xl px-4 py-8 text-sm opacity-80 flex flex-col sm:flex-row items-center justify-between gap-4">
+        <p>© {new Date().getFullYear()} Postal Systems · San Diego, CA</p>
+        <div class="flex items-center gap-4">
+          <a class="hover:opacity-100" href="/services">Services</a>
+          <a class="hover:opacity-100" href="/service-areas">Service Areas</a>
+          <a class="hover:opacity-100" href="/contact">Contact</a>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
