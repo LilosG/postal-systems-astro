@@ -1,0 +1,41 @@
+---
+import "../styles/tailwind.css";
+const { title = "Postal Systems", description = "USPS-approved commercial mailbox installs in San Diego" } = Astro.props;
+---
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    <meta name="description" content={description} />
+
+    <!-- Fonts to match homepage -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <!-- Lovable's compiled CSS used by the homepage -->
+    <link rel="stylesheet" crossorigin href="/assets/index-N3m_CGat.css" />
+  </head>
+  <body>
+    <header class="border-b border-[hsl(var(--border))]">
+      <div class="max-w-7xl mx-auto px-4 py-4 flex items-center justify-between">
+        <a href="/" class="flex items-center gap-3">
+          <img src="/logo.svg" alt="Logo" class="h-8 w-auto" />
+          <span class="text-[hsl(var(--postal-navy))] text-lg font-semibold">Postal Systems</span>
+        </a>
+        <nav class="hidden md:flex items-center gap-6">
+          <a href="/services" class="hover:opacity-80">Services</a>
+          <a href="/service-areas" class="hover:opacity-80">Service Areas</a>
+          <a href="/contact" class="btn-hero-primary">Get a Quote</a>
+        </nav>
+      </div>
+    </header>
+
+    <main class="pt-24"><slot /></main>
+
+    <footer class="mt-16 border-t border-[hsl(var(--border))]">
+      <div class="max-w-7xl mx-auto px-4 py-10 text-sm text-gray-600">
+        © {new Date().getFullYear()} Postal Systems • USPS-approved • Licensed & Insured
+      </div>
+    </footer>
+  </body>
+</html>

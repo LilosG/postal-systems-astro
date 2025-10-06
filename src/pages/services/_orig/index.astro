@@ -1,0 +1,333 @@
+---
+import LovableLayout from "../../layouts/LovableLayout.astro";
+
+const pageTitle = "Services | Postal Systems";
+const metaDescription =
+  "USPS-approved commercial mailbox supply, installation, parcel lockers, repairs, ADA compliance, and maintenance across San Diego County.";
+import Layout from "../../layouts/LovableLayout.astro"
+---
+<Layout>
+
+<LovableLayout title={pageTitle} description={metaDescription}>
+  <main class="pt-24">
+
+    <!-- HERO (matches homepage tokens: eyebrow, lead, trust-badge, btn-hero-*) -->
+    <section class="container pb-6">
+      <p class="eyebrow">USPS-approved vendor</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold tracking-tight text-[hsl(var(--postal-navy))]">
+        Complete Mailbox <span class="text-[hsl(var(--postal-red))]">Services</span>, Done Right.
+      </h1>
+      <p class="lead max-w-2xl mt-3">
+        Supply, install, upgrade, and service CBUs, 4C mailboxes, parcel lockers, and more —
+        all installed with USPS approval and professionally managed.
+      </p>
+
+      <div class="mt-5 flex flex-wrap items-center gap-3">
+        <span class="trust-badge">USPS Approved</span>
+        <span class="trust-badge">Licensed & Insured</span>
+        <span class="trust-badge">15+ Years</span>
+        <span class="trust-badge">Warranty & Support</span>
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <a href="/contact" class="btn-hero-primary">Get a Quote</a>
+        <a href="tel:6194614787" class="btn-hero-secondary">Call Now</a>
+      </div>
+
+      <!-- Quick stats (same card style used elsewhere) -->
+      <div class="mt-10 grid grid-cols-3 gap-6 max-w-xl">
+        <div class="card text-center p-4">
+          <div class="text-2xl font-bold">250+</div>
+          <div class="text-xs opacity-70">Installs</div>
+        </div>
+        <div class="card text-center p-4">
+          <div class="text-2xl font-bold">100%</div>
+          <div class="text-xs opacity-70">USPS sign-off</div>
+        </div>
+        <div class="card text-center p-4">
+          <div class="text-2xl font-bold">24–48h</div>
+          <div class="text-xs opacity-70">Service ETA</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OUR SERVICES -->
+    <section class="section-muted py-10">
+      <div class="container">
+        <h2 class="section-title text-center">Our Services</h2>
+        <p class="text-center opacity-80 max-w-3xl mx-auto">
+          Complete mailbox solutions from installation to maintenance — all USPS-approved and professionally managed.
+        </p>
+
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+
+          <!-- CBU -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Cluster Box Units (CBU)</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                USPS-approved CBU supply & install — pads & anchors, compliant placement, USPS inspection, keying.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/cluster-box-units" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- 4C -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">4C Mailboxes</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Interior/exterior 4C installs meeting USPS specs — correct heights & approaches, wall or recess.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/4c-mailboxes" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- Repairs -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Repairs & Lock Changes</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Doors, hinges, vandalized cores, lock/core changes, tenant keys & replacements.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/repairs-lock-changes" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- Parcel Lockers -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Parcel Lockers</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Add-on package lockers for multifamily & commercial; USPS-compliant layouts.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/parcel-lockers" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- Maintenance -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Maintenance</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Ongoing plans to keep systems compliant, secure, and operational.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/maintenance" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- Pedestal & Wall Mounted -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">Pedestal & Wall-Mounted</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Secure pedestal and wall-mounted units with proper anchoring & weathering.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/pedestal-wall-mounted" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- ADA -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">ADA-Compliant Installs</h3>
+              <p class="mt-1 opacity-80 text-sm">
+                Accessible placements and heights to spec for new installs & retrofits.
+              </p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/services/ada-compliant-installs" class="btn-hero-primary">View Service</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+          <!-- Service Areas -->
+          <article class="card card-padded flex flex-col">
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold">See Service Areas</h3>
+              <p class="mt-1 opacity-80 text-sm">Find coverage near you across San Diego County.</p>
+            </div>
+            <div class="mt-4 flex items-center justify-between">
+              <a href="/service-areas" class="btn-hero-secondary">Browse Areas</a>
+              <a href="/contact" class="text-sm underline">Request a quote →</a>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- INDUSTRIES -->
+    <section class="py-12">
+      <div class="container">
+        <h2 class="section-title text-center">Industries We Serve</h2>
+        <p class="text-center opacity-80 max-w-3xl mx-auto">
+          Specialized mailbox solutions for diverse property types across San Diego County.
+        </p>
+        <div class="mt-6 flex flex-wrap gap-3 justify-center">
+          <span class="chip">HOAs & Property Managers</span>
+          <span class="chip">Apartments & Multifamily</span>
+          <span class="chip">Builders & General Contractors</span>
+          <span class="chip">Commercial & Industrial Parks</span>
+          <span class="chip">Campuses & Municipal</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHY CHOOSE -->
+    <section class="section-muted py-12">
+      <div class="container">
+        <h2 class="section-title text-center">Why Choose Postal Systems</h2>
+        <p class="text-center opacity-80 max-w-3xl mx-auto">
+          Two decades of experience delivering professional mailbox solutions across San Diego County.
+        </p>
+
+        <div class="mt-8 grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+          <div class="card card-padded">
+            <h4 class="font-semibold">USPS Approved</h4>
+            <p class="text-sm opacity-80 mt-1">We coordinate placement, clearances, inspections, and final sign-off.</p>
+          </div>
+          <div class="card card-padded">
+            <h4 class="font-semibold">Licensed/Bonded/Insured</h4>
+            <p class="text-sm opacity-80 mt-1">Professional install & coverage for peace of mind.</p>
+          </div>
+          <div class="card card-padded">
+            <h4 class="font-semibold">Turnkey Installations</h4>
+            <p class="text-sm opacity-80 mt-1">Concrete pads, anchoring, keying, and USPS handover — start to finish.</p>
+          </div>
+          <div class="card card-padded">
+            <h4 class="font-semibold">Warranty & Support</h4>
+            <p class="text-sm opacity-80 mt-1">Manufacturer-backed hardware plus responsive local service.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FEATURED PROJECTS -->
+    <section class="py-12">
+      <div class="container">
+        <h2 class="section-title text-center">Featured Projects</h2>
+        <p class="text-center opacity-80 max-w-3xl mx-auto">
+          Recent installations across San Diego communities and commercial properties.
+        </p>
+
+        <div class="mt-8 grid md:grid-cols-3 gap-6">
+          <div class="card card-padded">
+            <h4 class="font-semibold">Community CBU cluster with parcel lockers</h4>
+            <p class="text-sm opacity-80 mt-1">Carlsbad</p>
+          </div>
+          <div class="card card-padded">
+            <h4 class="font-semibold">4C wall bank — interior lobby install</h4>
+            <p class="text-sm opacity-80 mt-1">Escondido</p>
+          </div>
+          <div class="card card-padded">
+            <h4 class="font-semibold">Outdoor pedestal units with ADA heights</h4>
+            <p class="text-sm opacity-80 mt-1">Chula Vista</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PROCESS -->
+    <section class="section-muted py-12">
+      <div class="container">
+        <h2 class="section-title text-center">Our Installation Process</h2>
+        <div class="mt-8 grid md:grid-cols-5 gap-4 text-center">
+          <div class="card p-4"><div class="font-semibold">1) Site Visit</div><div class="text-xs opacity-70">Measure & review</div></div>
+          <div class="card p-4"><div class="font-semibold">2) Quote</div><div class="text-xs opacity-70">Scope, timeline, options</div></div>
+          <div class="card p-4"><div class="font-semibold">3) Schedule</div><div class="text-xs opacity-70">Coordinate installs</div></div>
+          <div class="card p-4"><div class="font-semibold">4) Install</div><div class="text-xs opacity-70">Pads, anchors, set</div></div>
+          <div class="card p-4"><div class="font-semibold">5) USPS Handover</div><div class="text-xs opacity-70">Inspect & keys</div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="py-12">
+      <div class="container">
+        <h2 class="section-title text-center">Frequently Asked Questions</h2>
+        <div class="mt-6 max-w-2xl mx-auto space-y-2">
+          <details class="card p-4"><summary class="font-medium cursor-pointer">Do you coordinate USPS approvals?</summary><p class="mt-2 text-sm opacity-80">Yes — we handle placement, clearances, and final sign-off.</p></details>
+          <details class="card p-4"><summary class="font-medium cursor-pointer">Do you pour pads and set anchors?</summary><p class="mt-2 text-sm opacity-80">Yes — turnkey concrete pads, anchoring, and leveling.</p></details>
+          <details class="card p-4"><summary class="font-medium cursor-pointer">Can you service my existing units?</summary><p class="mt-2 text-sm opacity-80">We repair doors, cores, and provide lock/key changes.</p></details>
+          <details class="card p-4"><summary class="font-medium cursor-pointer">Are 4C mailboxes required?</summary><p class="mt-2 text-sm opacity-80">For most new interior installs, yes — to meet USPS specs.</p></details>
+        </div>
+      </div>
+    </section>
+
+    <!-- CTA STRIP -->
+    <section class="py-12 bg-gradient-to-r from-[hsl(var(--postal-navy))] to-[hsl(var(--postal-red))] text-white text-center">
+      <div class="container">
+        <h3 class="text-2xl md:text-3xl font-bold">Ready to upgrade your mailboxes?</h3>
+        <p class="text-white/90 max-w-2xl mx-auto mt-2">Get a professional, USPS-approved installation. Contact us for your free quote.</p>
+        <div class="mt-6 flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="/contact" class="inline-flex items-center justify-center gap-2 bg-white text-[hsl(var(--postal-navy))] px-8 py-4 rounded-xl font-semibold hover:bg-white/90">Get a Quote</a>
+          <a href="tel:6194614787" class="inline-flex items-center justify-center gap-2 border-2 border-white px-8 py-4 rounded-xl font-semibold hover:bg-white hover:text-[hsl(var(--postal-navy))]">Call Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUOTE FORM + CONTACT -->
+    <section class="py-12">
+      <div class="container grid lg:grid-cols-3 gap-6 items-start">
+        <form action="/contact" method="GET" class="card card-padded lg:col-span-2">
+          <h3 class="font-semibold mb-3">Get Your Free Quote</h3>
+
+          <div class="grid md:grid-cols-2 gap-3">
+            <input class="input" type="text" name="name" placeholder="Name*" required />
+            <input class="input" type="tel" name="phone" placeholder="Phone" />
+            <input class="input" type="email" name="email" placeholder="Email*" required />
+            <input class="input" type="text" name="city" placeholder="Property city / address" />
+            <select class="input" name="property">
+              <option value="">Property type</option>
+              <option>HOA</option><option>Apartment / Multifamily</option>
+              <option>Office / Commercial</option><option>Campus / Municipal</option>
+            </select>
+            <input class="input" type="text" name="mailbox_count" placeholder="Mailbox count (e.g., 20 boxes)" />
+          </div>
+
+          <textarea class="input h-28 mt-3" name="details" placeholder="Tell us about your mailbox installation needs..."></textarea>
+
+          <div class="mt-4 flex gap-3">
+            <button type="submit" class="btn-hero-primary">Send Message</button>
+            <a class="btn-hero-secondary" href="/contact">More contact options</a>
+          </div>
+          <p class="text-xs opacity-60 mt-2">We’ll reply quickly. No spam.</p>
+        </form>
+
+        <aside class="card card-padded">
+          <h3 class="font-semibold mb-2">Contact Information</h3>
+          <ul class="text-sm space-y-1">
+            <li><strong>Postal Systems</strong></li>
+            <li>San Diego, CA</li>
+            <li><a class="underline" href="tel:6194614787">(619) 461-4787</a></li>
+            <li><a class="underline" href="mailto:quotes@postalsystems.com">quotes@postalsystems.com</a></li>
+          </ul>
+          <div class="mt-4 text-xs opacity-70">
+            Licensed Contractor<br/>Bonded & Insured
+          </div>
+        </aside>
+      </div>
+    </section>
+
+  </main>
+</LovableLayout>
+</Layout>

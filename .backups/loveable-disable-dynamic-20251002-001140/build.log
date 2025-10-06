@@ -1,0 +1,70 @@
+
+> postal-systems-astro@0.0.1 build
+> astro build
+
+00:11:43 [content] Syncing content
+00:11:43 [content] Synced content
+00:11:43 [types] Generated 749ms
+00:11:43 [build] output: "static"
+00:11:43 [build] mode: "static"
+00:11:43 [build] directory: /Users/michaelprickett/Sites/postal-systems-astro/dist/
+00:11:43 [build] Collecting build info...
+00:11:43 [build] ✓ Completed in 784ms.
+00:11:43 [build] Building static entrypoints...
+00:11:44 [vite] ✓ built in 1.11s
+00:11:44 [build] ✓ Completed in 1.16s.
+
+ generating static routes 
+00:11:44 ▶ src/pages/404.astro
+00:11:44   └─ /404.html (+9ms) 
+00:11:44 ▶ src/pages/about.astro
+00:11:44   └─ /about/index.html (+4ms) 
+00:11:44 ▶ src/pages/contact.astro
+00:11:44   └─ /contact/index.html (+3ms) 
+00:11:44 ▶ src/pages/industries/commercial.astro
+00:11:44   └─ /industries/commercial/index.html (+6ms) 
+00:11:44 ▶ src/pages/industries/developers.astro
+00:11:44   └─ /industries/developers/index.html (+5ms) 
+00:11:44 ▶ src/pages/industries/hoa.astro
+00:11:44   └─ /industries/hoa/index.html (+2ms) 
+00:11:44 ▶ src/pages/industries/office.astro
+00:11:44   └─ /industries/office/index.html (+4ms) 
+00:11:44 ▶ src/pages/industries/property-managers.astro
+00:11:44   └─ /industries/property-managers/index.html (+5ms) 
+00:11:44 ▶ src/pages/industries/index.astro
+00:11:44   └─ /industries/index.html (+9ms) 
+00:11:44 ▶ src/pages/service-areas/[slug].astro
+00:11:44   ├─ /service-areas/san-diego/index.html (+7ms) 
+00:11:44   ├─ /service-areas/carlsbad/index.html (+2ms) 
+00:11:44   ├─ /service-areas/chula-vista/index.html (+3ms) 
+00:11:44   ├─ /service-areas/oceanside/index.html (+5ms) 
+00:11:44   ├─ /service-areas/la-mesa/index.html (+3ms) 
+00:11:44   ├─ /service-areas/el-cajon/index.html (+5ms) 
+00:11:44   ├─ /service-areas/escondido/index.html (+3ms) 
+00:11:44   └─ /service-areas/san-marcos/index.html (+10ms) 
+00:11:44 ▶ src/pages/services/4c-mailboxes.astro
+00:11:44   └─ /services/4c-mailboxes/index.html (+13ms) 
+00:11:44 ▶ src/pages/services/ada-compliant-installs.astro
+00:11:44   └─ /services/ada-compliant-installs/index.html (+5ms) 
+00:11:44 ▶ src/pages/services/cluster-box-units.astro
+00:11:44   └─ /services/cluster-box-units/index.html (+2ms) 
+00:11:44 ▶ src/pages/services/maintenance.astro
+00:11:44   └─ /services/maintenance/index.html (+4ms) 
+00:11:44 ▶ src/pages/services/parcel-lockers.astro
+00:11:44   └─ /services/parcel-lockers/index.html (+2ms) 
+00:11:44 ▶ src/pages/services/pedestal-wall-mounted.astro
+00:11:44   └─ /services/pedestal-wall-mounted/index.html (+2ms) 
+00:11:44 ▶ src/pages/services/repairs-lock-changes.astro
+00:11:44   └─ /services/repairs-lock-changes/index.html (+2ms) 
+00:11:44 ▶ src/pages/services/index.astro
+00:11:44   └─ /services/index.html (+3ms) 
+00:11:44 ▶ src/pages/thank-you.astro
+00:11:44   └─ /thank-you/index.html (+2ms) 
+00:11:44 ▶ src/pages/index.html
+00:11:44   └─ /index.html (+2ms) 
+00:11:44 ▶ src/pages/service-areas/index.astro
+00:11:44   └─ /service-areas/index.html (+7ms) 
+00:11:44 ✓ Completed in 282ms.
+
+00:11:44 [build] 28 page(s) built in 2.26s
+00:11:44 [build] Complete!

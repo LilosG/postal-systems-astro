@@ -1,16 +1,17 @@
 ---
+import LovableLayout from "../../layouts/LovableLayout.astro";
 import Base from "../../layouts/Base.astro";
-import { getCollection } from "astro:content";
+import { getCollection, type CollectionEntry } from "astro:content";
 
 const title = "Service Areas | San Diego Commercial Mailbox";
 const description = "Browse our current coverage by city and region.";
 
-type AreaEntry = { slug: string; data: { title: string } };
-const entries = await getCollection('areas') as AreaEntry[];
-const areas = entries
+const entries = await getCollection("areas");
+const areas = (entries as CollectionEntry<"areas">[])
   .map((e) => ({ href: `/service-areas/${e.slug}`, label: e.data.title }))
   .sort((a, b) => a.label.localeCompare(b.label));
 ---
+<LovableLayout title="Service Areas | Postal Systems">
 <Base {title} {description}>
   <h1 class="text-3xl font-semibold mb-6">Service Areas</h1>
   <p class="mb-8 opacity-80">Each area page uses the unified layout and header.</p>
@@ -22,3 +23,4 @@ const areas = entries
     ))}
   </div>
 </Base>
+</LovableLayout>

@@ -1,0 +1,28 @@
+---
+const links = [
+  { href: "/", label: "Home" },
+  { href: "/services", label: "Services" },
+  { href: "/service-areas", label: "Service Areas" },
+  { href: "/about", label: "About" },
+  { href: "/contact", label: "Contact" }
+];
+const path: string = Astro.url.pathname;
+function isActive(href: string): boolean {
+  if (href === "/") return path === "/";
+  return path === href || path.startsWith(href + "/");
+}
+---
+<header class="border-b">
+  <div class="container mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
+    <a href="/" class="font-semibold text-lg">San Diego Commercial Mailbox</a>
+    <nav class="flex items-center gap-6">
+      {links.map(l => (
+        <a
+          href={l.href}
+          class={`text-sm transition-opacity ${isActive(l.href) ? "opacity-100 font-medium" : "opacity-70 hover:opacity-100"}`}
+        >{l.label}</a>
+      ))}
+      <a href="/contact" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-gray-900 text-white hover:opacity-90">Get Quote</a>
+    </nav>
+  </div>
+</header>

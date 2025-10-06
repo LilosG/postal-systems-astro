@@ -1,3 +1,93 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "./tokens.css";
+@import "tailwindcss";
+
+@layer base{
+  html { scroll-behavior: smooth; }
+/*   body { color: hsl(var(--postal-slate)); background: hsl(var(--background)); } */
+/*   h1,h2,h3,h4 { color: hsl(var(--postal-navy)); } */
+}
+
+@layer components{
+  .container { @apply mx-auto px-4; }
+.container{max-width:1140px;}
+  .section { @apply py-12 md:py-16; }
+  .grid2 { @apply grid md:grid-cols-2 gap-6; }
+  .grid3 { @apply grid md:grid-cols-3 gap-6; }
+  .card { background: hsl(var(--card)); color: hsl(var(--card-foreground)); border:1px solid hsl(var(--border)); border-radius: var(--radius); box-shadow: var(--shadow-card); @apply p-6; }
+  .section-muted { background: hsl(var(--postal-light)); }
+  .eyebrow { @apply text-[hsl(var(--muted-foreground))] text-sm mb-2; }
+  .h1 { @apply text-3xl md:text-5xl font-semibold text-[hsl(var(--postal-navy))] mb-4; }
+  .h2 { @apply text-2xl md:text-3xl font-semibold text-[hsl(var(--postal-navy))] mb-3; }
+  .lead { @apply text-lg md:text-xl text-[hsl(var(--muted-foreground))]; }
+  .pill { @apply inline-flex items-center gap-2 px-3 py-1 rounded-full border border-[hsl(var(--border))] bg-white; }
+  .btn-primary { background: hsl(var(--postal-navy)); color: hsl(var(--primary-foreground)); border-radius: var(--radius); box-shadow: var(--shadow-hero); @apply inline-flex items-center gap-2 px-5 py-3 font-semibold transition-all; }
+  .btn-primary:hover { filter: brightness(0.95); }
+  .btn-outline-red { color: hsl(var(--postal-red)); border:2px solid hsl(var(--postal-red)); border-radius:9999px; @apply inline-flex items-center gap-2 px-4 py-2 font-semibold transition-all; }
+  .btn-outline-red:hover { background: hsl(var(--postal-red)); color:white; }
+}
+
+/* --- Lovable look helpers (match homepage) --- */
+@layer base {
+  body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  h1,h2,h3,h4,h5,h6 { font-family: Poppins, ui-sans-serif, system-ui, sans-serif; }
+}
+
+/* Container width to match home (~1140px) */
+.container { @apply mx-auto px-4; max-width: 1140px; }
+
+@layer components {
+  .eyebrow { @apply text-[hsl(var(--muted-foreground))] text-sm; }
+  .lead    { @apply text-[hsl(var(--postal-slate))] text-lg md:text-xl; }
+
+  .btn-hero-primary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 text-white rounded-xl transition-all;
+    background: linear-gradient(to right, hsl(var(--postal-navy)), hsl(var(--postal-navy)));
+    box-shadow: var(--shadow-hero);
+  }
+  .btn-hero-primary:hover { transform: translateY(-1px); }
+
+  .btn-hero-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-xl transition-all border-2;
+    border-color: hsl(var(--postal-navy));
+    color: hsl(var(--postal-navy));
+    background: #fff;
+  }
+
+  .card           { background:#fff; border:1px solid hsl(var(--border)); border-radius: var(--radius); box-shadow: var(--shadow-card); }
+  .card-padded    { @apply p-6; }
+  .trust-badge    { @apply inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-white border; border-color: hsl(var(--border)); }
+  .section-muted  { background: hsl(var(--secondary)); }
+}
+
+/* --- Lovable look helpers (match homepage) --- */
+@layer base {
+  body { font-family: Inter, ui-sans-serif, system-ui, sans-serif; }
+  h1,h2,h3,h4,h5,h6 { font-family: Poppins, ui-sans-serif, system-ui, sans-serif; }
+}
+
+/* Container width to match home (~1140px) */
+.container { @apply mx-auto px-4; max-width: 1140px; }
+
+@layer components {
+  .eyebrow { @apply text-[hsl(var(--muted-foreground))] text-sm; }
+  .lead    { @apply text-[hsl(var(--postal-slate))] text-lg md:text-xl; }
+
+  .btn-hero-primary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 text-white rounded-xl transition-all;
+    background: linear-gradient(to right, hsl(var(--postal-navy)), hsl(var(--postal-navy)));
+    box-shadow: var(--shadow-hero);
+  }
+  .btn-hero-primary:hover { transform: translateY(-1px); }
+
+  .btn-hero-secondary {
+    @apply inline-flex items-center justify-center gap-2 font-semibold px-6 py-3 rounded-xl transition-all border-2;
+    border-color: hsl(var(--postal-navy));
+    color: hsl(var(--postal-navy));
+    background: #fff;
+  }
+
+  .card           { background:#fff; border:1px solid hsl(var(--border)); border-radius: var(--radius); box-shadow: var(--shadow-card); }
+  .card-padded    { @apply p-6; }
+  .trust-badge    { @apply inline-flex items-center gap-2 text-sm px-3 py-1 rounded-full bg-white border; border-color: hsl(var(--border)); }
+  .section-muted  { background: hsl(var(--secondary)); }
+}

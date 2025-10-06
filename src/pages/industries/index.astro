@@ -1,9 +1,11 @@
 ---
+import LovableLayout from "../../layouts/LovableLayout.astro";
 import Base from "../../layouts/Base.astro";
 const title = "Industries | San Diego Commercial Mailbox";
 const description = "Industries we serve.";
 const jsonLd = { "@context": "https://schema.org", "@type": "WebPage", "name": "Industries", "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined };
 ---
+<LovableLayout title="Industries | Postal Systems">
 <Base {title} {description} jsonLd={jsonLd}>
   <nav aria-label="Breadcrumb" class="mb-4 text-sm">
     <a href="/" class="opacity-70 hover:opacity-100">Home</a>
@@ -19,3 +21,4 @@ const jsonLd = { "@context": "https://schema.org", "@type": "WebPage", "name": "
     <li><a class="underline" href="/industries/property-managers">Property Managers</a></li>
   </ul>
 </Base>
+</LovableLayout>

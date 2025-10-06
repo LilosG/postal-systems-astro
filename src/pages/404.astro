@@ -1,8 +1,10 @@
 ---
+import LovableLayout from "../layouts/LovableLayout.astro";
 import Base from "../layouts/Base.astro";
 const title = "Page Not Found | San Diego Commercial Mailbox";
 const description = "Sorry, we can’t find that page.";
 ---
+<LovableLayout title="Page not found | Postal Systems">
 <Base {title} {description}>
   <h1 class="text-3xl font-semibold mb-4">Page not found</h1>
   <p class="opacity-80 mb-6">Try one of these pages:</p>
@@ -13,3 +15,4 @@ const description = "Sorry, we can’t find that page.";
     <li><a class="underline" href="/contact">Contact</a></li>
   </ul>
 </Base>
+</LovableLayout>

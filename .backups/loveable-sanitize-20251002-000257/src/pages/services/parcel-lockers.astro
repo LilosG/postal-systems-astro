@@ -1,0 +1,19 @@
+---
+import Base from "@/layouts/Base.astro";
+import LovableLayout from "../../layouts/LovableLayout.astro";
+const pageTitle = typeof title !== "undefined" ? title : "Postal Systems";
+---
+<LovableLayout title={pageTitle}>
+<Base title="Parcel Lockers">
+  <section class="mx-auto max-w-6xl py-10">
+    <h1 class="text-3xl font-semibold tracking-tight">Parcel Lockers</h1>
+    <p class="mt-2 opacity-80">Secure parcel delivery for apartments, offices, and mixed-use properties.</p>
+    <ul class="mt-6 list-disc pl-6 space-y-1">
+      <li>Modular locker configurations</li>
+      <li>Indoor/outdoor placement and protection</li>
+      <li>USPS compliance</li>
+    </ul>
+    <div class="mt-8"><a href="/contact" class="rounded-md border px-4 py-2">Request a Quote</a></div>
+  </section>
+</Base>
+</LovableLayout>

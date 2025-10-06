@@ -1,0 +1,15 @@
+---
+import Base from "../layouts/Base.astro";
+const title = "Page Not Found | San Diego Commercial Mailbox";
+const description = "Sorry, we can’t find that page.";
+---
+<Base {title} {description}>
+  <h1 class="text-3xl font-semibold mb-4">Page not found</h1>
+  <p class="opacity-80 mb-6">Try one of these pages:</p>
+  <ul class="list-disc pl-5 space-y-2">
+    <li><a class="underline" href="/">Home</a></li>
+    <li><a class="underline" href="/services">Services</a></li>
+    <li><a class="underline" href="/service-areas">Service Areas</a></li>
+    <li><a class="underline" href="/contact">Contact</a></li>
+  </ul>
+</Base>

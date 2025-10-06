@@ -1,0 +1,17 @@
+---
+import Base from "../../layouts/Base.astro";
+const title = "Commercial | San Diego Commercial Mailbox";
+const description = "Commercial services and capabilities.";
+const jsonLd = { "@context": "https://schema.org", "@type": "WebPage", "name": "Commercial", "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined };
+---
+<Base {title} {description} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm">
+    <a href="/" class="opacity-70 hover:opacity-100">Home</a>
+    <span class="px-2">/</span>
+    <a href="/industries" class="opacity-70 hover:opacity-100">Industries</a>
+    <span class="px-2">/</span>
+    <span class="opacity-100">Commercial</span>
+  </nav>
+  <h1 class="text-3xl font-semibold mb-4">Commercial</h1>
+  <p class="opacity-80 mb-6">Unified layout, consistent SEO scaffolding.</p>
+</Base>

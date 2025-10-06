@@ -1,0 +1,34 @@
+---
+import ServicesBase from "../../layouts/ServicesBase.astro";
+import { SERVICES } from "../../data/services";
+export function getStaticPaths() {
+  return SERVICES.map(s => ({ params: { service: s.slug }, props: { s } }));
+}
+const { s } = Astro.props;
+---
+<ServicesBase title={`${s.name} | Postal Systems`} description={s.blurb}>
+  <section class="pt-24 pb-8 bg-gradient-to-b from-white to-[hsl(var(--secondary))]">
+    <div class="container">
+      <p class="eyebrow">Service</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-[hsl(var(--postal-navy))]">{s.name}</h1>
+      <p class="lead max-w-3xl">{s.blurb}</p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container grid md:grid-cols-3 gap-6">
+      <div class="md:col-span-2">
+        <div class="card card-padded">
+          <h2 class="text-xl font-semibold text-[hsl(var(--postal-navy))] mb-4">Overview</h2>
+          <p class="text-[hsl(var(--muted-foreground))] mb-4">Install details, USPS compliance, configurations, warranty, etc.</p>
+          {s.heroImg && <img src={s.heroImg} alt={s.name} class="w-full rounded-xl shadow-[var(--shadow-hero)]" />}
+        </div>
+      </div>
+      <aside class="card card-padded">
+        <h3 class="text-lg font-semibold mb-2 text-[hsl(var(--postal-navy))]">Fast Quote</h3>
+        <p class="text-[hsl(var(--muted-foreground))] mb-4">Send specs/site photos; we’ll price today.</p>
+        <a class="btn-hero-primary w-full" href="/contact">Request Quote</a>
+      </aside>
+    </div>
+  </section>
+</ServicesBase>

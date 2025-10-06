@@ -1,0 +1,17 @@
+---
+interface QA { q: string; a: string; }
+const { items = [] as QA[], title = "FAQs" } = Astro.props;
+---
+<section class="section">
+  <div class="container">
+    <h2 class="h2">{title}</h2>
+    <div class="divide-y divide-[hsl(var(--border))]">
+      {items.map((f, i) => (
+        <details class="py-4" { ...(i === 0 ? { open: true } : {}) }>
+          <summary class="cursor-pointer font-semibold text-[hsl(var(--postal-navy))]">{f.q}</summary>
+          <div class="mt-2 text-[hsl(var(--muted-foreground))]">{f.a}</div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

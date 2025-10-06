@@ -1,0 +1,21 @@
+---
+import Base from "../../layouts/Base.astro";
+const title = "Industries | San Diego Commercial Mailbox";
+const description = "Industries we serve.";
+const jsonLd = { "@context": "https://schema.org", "@type": "WebPage", "name": "Industries", "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined };
+---
+<Base {title} {description} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm">
+    <a href="/" class="opacity-70 hover:opacity-100">Home</a>
+    <span class="px-2">/</span>
+    <span class="opacity-100">Industries</span>
+  </nav>
+  <h1 class="text-3xl font-semibold mb-4">Industries</h1>
+  <ul class="list-disc pl-5 space-y-2">
+    <li><a class="underline" href="/industries/commercial">Commercial</a></li>
+    <li><a class="underline" href="/industries/office">Office</a></li>
+    <li><a class="underline" href="/industries/hoa">HOA</a></li>
+    <li><a class="underline" href="/industries/developers">Developers</a></li>
+    <li><a class="underline" href="/industries/property-managers">Property Managers</a></li>
+  </ul>
+</Base>

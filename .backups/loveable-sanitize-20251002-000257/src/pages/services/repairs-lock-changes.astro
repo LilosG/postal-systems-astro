@@ -1,0 +1,19 @@
+---
+import Base from "@/layouts/Base.astro";
+import LovableLayout from "../../layouts/LovableLayout.astro";
+const pageTitle = typeof title !== "undefined" ? title : "Postal Systems";
+---
+<LovableLayout title={pageTitle}>
+<Base title="Repairs & Lock Changes">
+  <section class="mx-auto max-w-6xl py-10">
+    <h1 class="text-3xl font-semibold tracking-tight">Repairs &amp; Lock Changes</h1>
+    <p class="mt-2 opacity-80">USPS-approved maintenance, lock/keying, tenant turnover, and vandalism repair.</p>
+    <ul class="mt-6 list-disc pl-6 space-y-1">
+      <li>Door, hinge, and cam lock replacements</li>
+      <li>Re-keying for turnovers</li>
+      <li>USPS coordination where required</li>
+    </ul>
+    <div class="mt-8"><a href="/contact" class="rounded-md border px-4 py-2">Request a Quote</a></div>
+  </section>
+</Base>
+</LovableLayout>

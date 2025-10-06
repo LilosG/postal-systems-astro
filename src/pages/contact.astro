@@ -1,4 +1,5 @@
 ---
+import LovableLayout from "../layouts/LovableLayout.astro";
 import Base from "../layouts/Base.astro";
 const title = "Contact | San Diego Commercial Mailbox";
 const description = "Request a quote or schedule service.";
@@ -9,6 +10,7 @@ const jsonLd = {
   "url": Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined
 };
 ---
+<LovableLayout title="Contact | Postal Systems">
 <Base {title} {description} jsonLd={jsonLd}>
   <h1 class="text-3xl font-semibold mb-6">Contact</h1>
   <p class="opacity-80 mb-6">Tell us what you need. We’ll respond quickly.</p>
@@ -18,3 +20,4 @@ const jsonLd = {
     <a href="/services" class="underline">Browse Services</a>
   </div>
 </Base>
+</LovableLayout>

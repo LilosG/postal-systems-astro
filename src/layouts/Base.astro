@@ -1,76 +1,20 @@
 ---
-import "../styles/global.css";
-
-interface BaseProps {
-  title?: string;
-  description?: string;
-  /** JSON-LD object or array of objects to embed on the page */
-  jsonLd?: Record<string, any> | Array<Record<string, any>>;
-}
-
-const {
-  title = "San Diego Commercial Mailbox | USPS-Approved Mailbox Installation — San Diego",
-  description = "Commercial mailbox installation & repair in San Diego: CBUs, 4C mailboxes, parcel lockers. Licensed installer. Free site review & quote.",
-  jsonLd
-} = Astro.props as BaseProps;
-
-const siteUrl = "https://postalsystemspro.com";
-const canonical = new URL(Astro.url.pathname, siteUrl).toString();
-const jsonLdList: Array<Record<string, any>> =
-  Array.isArray(jsonLd) ? jsonLd : jsonLd ? [jsonLd] : [];
+type Json = Record<string, any>;
+interface Props { title?: string; description?: string; jsonLd?: Json; }
+const { title = "Postal Systems", description = "", jsonLd } = Astro.props as Props;
 ---
-
-<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>{title}</title>
-    <meta name="description" content={description} />
-    <link rel="canonical" href={canonical} />
-
-    <!-- Open Graph -->
-    <meta property="og:title" content={title} />
-    <meta property="og:description" content={description} />
-    <meta property="og:url" content={canonical} />
-    <meta property="og:type" content="website" />
-
-    <!-- Twitter -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content={title} />
-    <meta name="twitter:description" content={description} />
-
-    {jsonLdList.map((block) => (
-      <script type="application/ld+json" set:html={JSON.stringify(block)} />
-    ))}
+    {description && <meta name="description" content={description} />}
+    {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
   </head>
-  <body class="min-h-screen bg-white text-gray-900 antialiased">
-    <!-- Header (matches homepage style) -->
-    <header class="mx-auto max-w-6xl flex items-center justify-between py-4">
-      <a href="/" class="font-semibold">San Diego Commercial Mailbox</a>
-      <nav>
-        <a href="/services" class="px-3">Services</a>
-        <a href="/contact" class="px-3">Contact</a>
-        <a href="/industries" class="px-3">Industries</a>
-      </nav>
-    </header>
-    <hr />
-
-    <!-- Page content -->
-    <main class="mx-auto max-w-6xl px-4 py-10">
-      <slot />
-    </main>
-
-    <footer class="mt-16 border-t">
-      <div class="mx-auto max-w-6xl px-4 py-8 text-sm opacity-80 flex flex-col sm:flex-row items-center justify-between gap-4">
-        <p>© {new Date().getFullYear()} San Diego Commercial Mailbox · San Diego, CA</p>
-        <div class="flex items-center gap-4">
-          <a class="hover:opacity-100" href="/services">Services</a>
-          <a class="hover:opacity-100" href="/industries">Industries</a>
-          <a class="hover:opacity-100" href="/contact">Contact</a>
-        </div>
-      </div>
-    </footer>
+  <body class="theme-postal">
+    <slot />
   </body>
 </html>

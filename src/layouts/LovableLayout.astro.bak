@@ -1,0 +1,26 @@
+---
+interface Props { title?: string; description?: string; bodyClass?: string; }
+const { title = 'Postal Systems', description = '', bodyClass = '' } = Astro.props;
+const HOME_CSS = '/assets/index-N3m_CGat.css';
+const HOME_JS  = '/assets/index-RJ4U58x-.js';
+---
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    {title && <title>{title}</title>}
+    {description && <meta name="description" content={description} />}
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href={HOME_CSS} />
+    <script type="module" is:inline>
+      if (document.getElementById('root')) { import(/** @vite-ignore */ HOME_JS); }
+    </script>
+  </head>
+  <body class={`theme-postal ${bodyClass}`.trim()}>
+    <slot />
+  </body>
+</html>

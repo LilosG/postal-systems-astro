@@ -1,8 +1,14 @@
 ---
-import Base from "@/layouts/Base.astro";
+import LovableLayout from "../../layouts/LovableLayout.astro";
 ---
-<Base title="Pedestal & Wall-Mounted Boxes">
-  <section class="mx-auto max-w-6xl py-10">
+<LovableLayout title="Pedestal & Wall-Mounted Boxes">
+---
+---
+
+---
+---
+const pageTitle = typeof title !== "undefined" ? title : "Postal Systems";
+<section class="mx-auto max-w-6xl py-10">
     <h1 class="text-3xl font-semibold tracking-tight">Pedestal &amp; Wall-Mounted Boxes</h1>
     <p class="mt-2 opacity-80">Neighborhood CBUs, HOA upgrades, wall sets, and replacements.</p>
     <ul class="mt-6 list-disc pl-6 space-y-1">
@@ -12,4 +18,4 @@ import Base from "@/layouts/Base.astro";
     </ul>
     <div class="mt-8"><a href="/contact" class="rounded-md border px-4 py-2">Request a Quote</a></div>
   </section>
-</Base>
+</LovableLayout>

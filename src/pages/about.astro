@@ -1,4 +1,5 @@
 ---
+import LovableLayout from "../layouts/LovableLayout.astro";
 import Base from "../layouts/Base.astro";
 import Breadcrumbs from "../components/Breadcrumbs.astro";
 
@@ -20,6 +21,7 @@ const jsonLd = {
   }
 };
 ---
+<LovableLayout title="About San Diego Commercial Mailbox | Postal Systems">
 <Base {title} {description} jsonLd={jsonLd}>
   <Breadcrumbs items={[
     { label: "Home", href: "/" },
@@ -52,3 +54,4 @@ const jsonLd = {
     </aside>
   </div>
 </Base>
+</LovableLayout>

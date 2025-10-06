@@ -1,0 +1,19 @@
+---
+import Base from "@/layouts/Base.astro";
+import LovableLayout from "../../layouts/LovableLayout.astro";
+const pageTitle = typeof title !== "undefined" ? title : "Postal Systems";
+---
+<LovableLayout title={pageTitle}>
+<Base title="Cluster Box Units (CBUs)">
+  <section class="mx-auto max-w-6xl py-10">
+    <h1 class="text-3xl font-semibold tracking-tight">Cluster Box Units (CBUs)</h1>
+    <p class="mt-2 opacity-80">Turnkey CBU supply, install, and USPS approval for communities and business parks.</p>
+    <ul class="mt-6 list-disc pl-6 space-y-1">
+      <li>Site review, pad/anchor prep, compliant placement</li>
+      <li>USPS coordination and final inspection</li>
+      <li>Lock/keying and tenant turnover support</li>
+    </ul>
+    <div class="mt-8"><a href="/contact" class="rounded-md border px-4 py-2">Request a Quote</a></div>
+  </section>
+</Base>
+</LovableLayout>

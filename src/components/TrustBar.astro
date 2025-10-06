@@ -1,0 +1,17 @@
+---
+const { items = [
+  { src: "/usps-approved.svg", alt: "USPS Approved" },
+  { src: "/bonded-insured.svg", alt: "Licensed & Insured" },
+  { src: "/years.svg", alt: "15+ Years" },
+] } = Astro.props;
+---
+<div class="section section-muted">
+  <div class="container grid md:grid-cols-3 gap-6 items-center">
+    {items.map(i => (
+      <div class="flex items-center gap-3">
+        <img src={i.src} alt={i.alt} class="h-8 w-auto" />
+        <span class="text-sm text-[hsl(var(--muted-foreground))]">{i.alt}</span>
+      </div>
+    ))}
+  </div>
+</div>

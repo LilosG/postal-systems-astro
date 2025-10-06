@@ -1,0 +1,30 @@
+---
+import ServicesBase from "../../layouts/ServicesBase.astro";
+import { CITIES } from "../../data/cities";
+export function getStaticPaths() {
+  return CITIES.map(c => ({ params: { slug: c.slug }, props: { c } }));
+}
+const { c } = Astro.props;
+---
+<ServicesBase title={`Commercial Mailboxes in ${c.name} | Postal Systems`} description={`USPS-approved installs across ${c.name}.`}>
+  <section class="pt-24 pb-8 bg-gradient-to-b from-white to-[hsl(var(--secondary))]">
+    <div class="container">
+      <p class="eyebrow">Service Area</p>
+      <h1 class="text-3xl md:text-4xl font-bold text-[hsl(var(--postal-navy))]">Commercial Mailbox Installs — {c.name}</h1>
+      <p class="lead max-w-3xl">USPS-approved supply & install across {c.name}.</p>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container">
+      <div class="card card-padded">
+        <ul class="list-disc pl-6 space-y-1">
+          <li>CBU supply & install</li>
+          <li>4C mailboxes</li>
+          <li>Repairs & lock changes</li>
+          <li>Parcel lockers</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</ServicesBase>

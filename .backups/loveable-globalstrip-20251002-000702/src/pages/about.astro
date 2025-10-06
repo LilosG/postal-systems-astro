@@ -1,0 +1,54 @@
+---
+import Base from "../layouts/Base.astro";
+import Breadcrumbs from "../components/Breadcrumbs.astro";
+
+const title = "About | San Diego Commercial Mailbox";
+const description = "Decades of experience installing and servicing USPS-compliant commercial mailboxes for HOAs, multifamily, and businesses.";
+const pageUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "AboutPage",
+  "name": "About",
+  "url": pageUrl,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site ? new URL("/", Astro.site).toString() : "/" },
+      { "@type": "ListItem", "position": 2, "name": "About", "item": pageUrl }
+    ]
+  }
+};
+---
+<Base {title} {description} jsonLd={jsonLd}>
+  <Breadcrumbs items={[
+    { label: "Home", href: "/" },
+    { label: "About" }
+  ]} />
+
+  <h1 class="text-3xl font-semibold mb-6">About San Diego Commercial Mailbox</h1>
+  <p class="opacity-80 mb-6">We specialize in USPS-compliant mailbox installations, upgrades, and repairs. From CBUs and parcel lockers to water-damage remediation, our team delivers fast, code-compliant results with clear communication.</p>
+
+  <div class="grid gap-8 lg:grid-cols-3">
+    <div class="lg:col-span-2 space-y-6">
+      <section>
+        <h2 class="text-xl font-medium mb-2">What we do</h2>
+        <ul class="list-disc pl-5 space-y-2">
+          <li>Cluster Box Units (CBU) and pedestal/wall-mounted installs</li>
+          <li>Repairs, re-keys, vandalism remediation, and preventative maintenance</li>
+          <li>Parcel locker planning for multifamily and commercial</li>
+          <li>Emergency <a class="underline" href="/services/water-damage-restoration">water damage restoration</a> for mailrooms</li>
+        </ul>
+      </section>
+      <section>
+        <h2 class="text-xl font-medium mb-2">Where we work</h2>
+        <p class="opacity-80">We serve all of San Diego County. Explore <a class="underline" href="/service-areas">service areas</a> or jump to <a class="underline" href="/service-areas/san-diego">San Diego</a>, <a class="underline" href="/service-areas/la-mesa">La Mesa</a>, or <a class="underline" href="/service-areas/carlsbad">Carlsbad</a>.</p>
+      </section>
+    </div>
+    <aside class="rounded-xl border p-6">
+      <div class="text-lg font-medium mb-2">Ready to get started?</div>
+      <p class="text-sm opacity-80 mb-4">Tell us about your property and timeline.</p>
+      <a href="/contact" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-gray-900 text-white hover:opacity-90">Request a Quote</a>
+    </aside>
+  </div>
+</Base>

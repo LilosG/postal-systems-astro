@@ -1,0 +1,73 @@
+---
+import Base from "../../layouts/Base.astro";
+
+const title = "Commercial Mailbox Service & Maintenance | San Diego Commercial Mailbox";
+const description = "Repair, re-keying, vandalism remediation, and preventative maintenance for commercial mailboxes in San Diego County.";
+
+const pageUrl = Astro.site ? new URL(Astro.url.pathname, Astro.site).toString() : undefined;
+const jsonLd = {
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Commercial Mailbox Service & Maintenance",
+  "serviceType": "Repair, re-keying, vandalism remediation, preventative maintenance",
+  "areaServed": { "@type": "AdministrativeArea", "name": "San Diego County" },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "San Diego Commercial Mailbox",
+    "url": Astro.site ? new URL("/", Astro.site).toString() : "/",
+    "telephone": "+1-619-460-1487",
+    "address": { "@type": "PostalAddress", "addressLocality": "San Diego", "addressRegion": "CA", "addressCountry": "US" }
+  },
+  "url": pageUrl,
+  "breadcrumb": {
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Home", "item": Astro.site ? new URL("/", Astro.site).toString() : "/" },
+      { "@type": "ListItem", "position": 2, "name": "Services", "item": Astro.site ? new URL("/services", Astro.site).toString() : "/services" },
+      { "@type": "ListItem", "position": 3, "name": "Service & Maintenance", "item": pageUrl }
+    ]
+  }
+};
+import LovableLayout from "../../layouts/LovableLayout.astro";
+const pageTitle = typeof title !== "undefined" ? title : "Postal Systems";
+---
+<LovableLayout title={pageTitle}>
+
+<Base {title} {description} jsonLd={jsonLd}>
+  <nav aria-label="Breadcrumb" class="mb-4 text-sm">
+    <a href="/" class="opacity-70 hover:opacity-100">Home</a>
+    <span class="px-2">/</span>
+    <a href="/services" class="opacity-70 hover:opacity-100">Services</a>
+    <span class="px-2">/</span>
+    <span class="opacity-100">Service & Maintenance</span>
+  </nav>
+
+  <h1 class="text-3xl font-semibold mb-4">Commercial Mailbox Service & Maintenance</h1>
+  <p class="opacity-80 mb-8">Repair, re-keying, vandalism remediation, and preventative maintenance for CBU, pedestal, and wall-mounted units. Fast scheduling and clear documentation.</p>
+
+  <div class="grid gap-8 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      <h2 class="text-xl font-medium mb-3">What we handle</h2>
+      <ul class="list-disc pl-5 space-y-2 mb-8">
+        <li>Lock and tenant compartment re-keying</li>
+        <li>Vandalism repair and door/hinge replacement</li>
+        <li>Cluster Box Unit and pedestal alignment</li>
+        <li>Preventative maintenance programs</li>
+      </ul>
+
+      <h2 class="text-xl font-medium mb-3">Popular service areas</h2>
+      <ul class="list-disc pl-5 space-y-2">
+        <li><a class="underline" href="/service-areas/san-diego">San Diego, CA</a></li>
+        <li><a class="underline" href="/service-areas/la-mesa">La Mesa, CA</a></li>
+        <li><a class="underline" href="/service-areas/carlsbad">Carlsbad, CA</a></li>
+      </ul>
+    </div>
+
+    <aside class="rounded-xl border p-6">
+      <div class="text-lg font-medium mb-2">Need maintenance?</div>
+      <p class="text-sm opacity-80 mb-4">Request a priority service visit.</p>
+      <a href="/contact" class="inline-flex items-center rounded-lg px-4 py-2 text-sm font-medium bg-gray-900 text-white hover:opacity-90">Request Service</a>
+    </aside>
+  </div>
+</Base>
+</LovableLayout>

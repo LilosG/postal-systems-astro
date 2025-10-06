@@ -1,0 +1,23 @@
+---
+import Base from "../../layouts/Base.astro";
+import { getCollection, type CollectionEntry } from "astro:content";
+
+const title = "Service Areas | San Diego Commercial Mailbox";
+const description = "Browse our current coverage by city and region.";
+
+const entries = await getCollection("areas");
+const areas = (entries as CollectionEntry<"areas">[])
+  .map((e) => ({ href: `/service-areas/${e.slug}`, label: e.data.title }))
+  .sort((a, b) => a.label.localeCompare(b.label));
+---
+<Base {title} {description}>
+  <h1 class="text-3xl font-semibold mb-6">Service Areas</h1>
+  <p class="mb-8 opacity-80">Each area page uses the unified layout and header.</p>
+  <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    {areas.map((a) => (
+      <a href={a.href} class="block rounded-xl border p-6 hover:shadow-md transition">
+        <h2 class="text-lg font-medium">{a.label}</h2>
+      </a>
+    ))}
+  </div>
+</Base>
