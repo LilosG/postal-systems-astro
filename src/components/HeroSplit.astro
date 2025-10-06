@@ -1,0 +1,35 @@
+---
+const {
+  eyebrow = "USPS-approved vendor",
+  title = "Complete Mailbox Services, Done Right.",
+  intro = "Supply, install, upgrade, and service CBUs, 4C mailboxes, parcel lockers, and more — all installed with USPS approval and professionally managed.",
+  imageSrc = "/images/hero.jpg",
+  imageAlt = "Mailbox installation team",
+  primaryHref = "/contact",
+  primaryText = "Get a Quote",
+  secondaryHref = "tel:+16194614787",
+  secondaryText = "Call Now"
+} = Astro.props;
+---
+<section class="relative">
+  <div class="container mx-auto max-w-6xl px-4 py-12 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div>
+      <p class="text-sm text-slate-500 font-medium mb-2">{eyebrow}</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight tracking-tight">
+        {title}
+      </h1>
+      <p class="mt-4 text-slate-600">{intro}</p>
+      <div class="mt-6 flex flex-wrap gap-3">
+        <a href={primaryHref} class="inline-flex items-center justify-center rounded-md px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 transition">
+          {primaryText}
+        </a>
+        <a href={secondaryHref} class="inline-flex items-center justify-center rounded-md px-4 py-2 border border-slate-300 text-slate-800 hover:bg-slate-50 transition">
+          {secondaryText}
+        </a>
+      </div>
+    </div>
+    <div class="relative">
+      <img src={imageSrc} alt={imageAlt} class="w-full h-auto rounded-xl shadow-lg object-cover" loading="eager" />
+    </div>
+  </div>
+</section>

@@ -1,0 +1,65 @@
+---
+/* Simple hero that mirrors your homepage look & feel */
+const {
+  headline = "Complete Mailbox Services, Done Right.",
+  subline = "Supply, install, upgrade, and service CBUs, 4C mailboxes, parcel lockers — all installed with USPS approval and professionally managed.",
+  ctas = [
+    { href: "/contact", label: "Get a Quote", primary: true },
+    { href: "tel:+16194614787", label: "Call Now", primary: false }
+  ],
+  badges = ["USPS Approved", "Licensed & Insured", "15+ Years", "Warranty & Support"],
+  imageSrc = "/hero-mailboxes.jpg",
+  imageAlt = "Mailbox installation team",
+} = Astro.props;
+---
+
+<section class="container mx-auto px-4 py-10 md:py-16">
+  <div class="grid gap-10 md:grid-cols-2 md:items-center">
+    <div>
+      <h1 class="text-3xl md:text-5xl font-extrabold leading-tight">
+        {headline}
+      </h1>
+      <p class="mt-4 text-sm md:text-base opacity-80">{subline}</p>
+
+      <div class="mt-5 flex flex-wrap gap-2">
+        {badges.map((b) => (
+          <span class="inline-flex items-center rounded-full border px-3 py-1 text-xs md:text-sm">{b}</span>
+        ))}
+      </div>
+
+      <div class="mt-6 flex flex-wrap gap-3">
+        {ctas.map((c) => (
+          c.primary ? (
+            <a href={c.href} class="inline-flex items-center rounded-md px-4 py-2 text-sm font-medium text-white bg-blue-600 hover:bg-blue-700 transition">
+              {c.label}
+            </a>
+          ) : (
+            <a href={c.href} class="inline-flex items-center rounded-md px-4 py-2 text-sm font-medium border hover:bg-gray-50 transition">
+              {c.label}
+            </a>
+          )
+        ))}
+      </div>
+    </div>
+
+    <div class="relative">
+      <img src={imageSrc} alt={imageAlt} class="w-full rounded-xl shadow-lg object-cover" loading="eager" />
+      <div class="absolute bottom-3 right-3 rounded bg-white/90 px-2 py-1 text-xs shadow">USPS-approved vendor</div>
+    </div>
+  </div>
+
+  <div class="mt-6 grid grid-cols-3 gap-3 md:grid-cols-3">
+    <div class="rounded-lg border p-4 text-center">
+      <div class="text-lg font-semibold">250+</div>
+      <div class="text-xs opacity-70">Installs</div>
+    </div>
+    <div class="rounded-lg border p-4 text-center">
+      <div class="text-lg font-semibold">100%</div>
+      <div class="text-xs opacity-70">USPS sign-off</div>
+    </div>
+    <div class="rounded-lg border p-4 text-center">
+      <div class="text-lg font-semibold">24–48h</div>
+      <div class="text-xs opacity-70">Service ETA</div>
+    </div>
+  </div>
+</section>

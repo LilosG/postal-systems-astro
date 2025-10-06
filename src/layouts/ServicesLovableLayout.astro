@@ -1,0 +1,7 @@
+---
+import LovableLayout from "./LovableLayout.astro";
+const { title = "Services", jsonLd = null } = Astro.props;
+---
+<LovableLayout {title} {jsonLd}>
+  <slot />
+</LovableLayout>

@@ -1,0 +1,36 @@
+---
+interface Props {
+  title?: string;
+  description?: string;
+  jsonLd?: any;
+  bodyClass?: string;
+}
+const {
+  title = "Postal Systems",
+  description = "",
+  jsonLd = null,
+  bodyClass = "",
+} = Astro.props as Props;
+---
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>{title}</title>
+    {description && <meta name="description" content={description} />}
+    {jsonLd && <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>}
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <link rel="stylesheet" href="/lovable/index-N3m_CGat.css" />
+    <link rel="stylesheet" href="/styles/tokens.css" />
+    <link rel="stylesheet" href="/styles/app.css" />
+    <link rel="stylesheet" href="/styles/utilities.css" />
+  </head>
+  <body class={`theme-postal ${bodyClass}`.trim()}>
+    <main id="main"><slot /></main>
+    <script type="module" crossorigin src="/lovable/index-RJ4U58x-.js"></script>
+  </body>
+</html>

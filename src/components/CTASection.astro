@@ -1,0 +1,26 @@
+---
+const {
+  title = "Ready to upgrade your mailboxes?",
+  blurb = "Get a professional, USPS-approved installation. Contact us for your free quote.",
+  primaryHref = "/contact",
+  primaryText = "Get a Quote",
+  secondaryHref = "tel:+16194614787",
+  secondaryText = "Call Now",
+} = Astro.props;
+---
+<section class="py-10">
+  <div class="container mx-auto max-w-6xl px-4">
+    <div class="rounded-2xl p-8 md:p-10 text-center text-white" style="background: linear-gradient(90deg,#2d5cff,#a434ff);">
+      <h2 class="text-2xl md:text-3xl font-semibold">{title}</h2>
+      <p class="mt-2 opacity-90">{blurb}</p>
+      <div class="mt-6 flex justify-center gap-3">
+        <a href={primaryHref} class="inline-flex items-center justify-center rounded-md px-4 py-2 bg-white text-slate-900 font-medium">
+          {primaryText}
+        </a>
+        <a href={secondaryHref} class="inline-flex items-center justify-center rounded-md px-4 py-2 border border-white/70 text-white">
+          {secondaryText}
+        </a>
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,53 @@
+---
+const {
+  title = "Complete Mailbox Services, Done Right.",
+  subtitle = "Supply, install, upgrade, and service CBUs, 4C mailboxes, parcel lockers — all installed with USPS approval and professionally managed.",
+  badges = ["USPS Approved", "Licensed & Insured", "15+ Years", "Warranty & Support"]
+} = Astro.props;
+---
+
+<section class="relative overflow-hidden">
+  <div class="container mx-auto px-4 py-10 md:py-16 grid md:grid-cols-2 gap-8 items-center">
+    <div class="relative z-10">
+      <p class="text-xs uppercase tracking-wide text-gray-500 mb-2">USPS-approved vendor</p>
+      <h1 class="text-4xl md:text-5xl font-extrabold leading-tight text-gray-900">
+        {title}
+      </h1>
+      <p class="mt-3 text-sm md:text-base text-gray-600 max-w-xl">{subtitle}</p>
+
+      <div class="flex flex-wrap gap-2 mt-5">
+        {badges.map((b) => (
+          <span class="inline-flex items-center rounded-full border border-gray-200 bg-white px-3 py-1 text-xs font-medium shadow-sm">
+            {b}
+          </span>
+        ))}
+      </div>
+
+      <div class="mt-6 flex gap-3">
+        <a href="/contact" class="inline-flex items-center justify-center rounded-md bg-[#0F62FE] px-4 py-2 text-white text-sm font-semibold shadow hover:opacity-95">Get a Quote</a>
+        <a href="tel:+16194614787" class="inline-flex items-center justify-center rounded-md border border-gray-300 bg-white px-4 py-2 text-sm font-semibold text-gray-800 hover:bg-gray-50">Call Now</a>
+      </div>
+    </div>
+
+    <div class="relative">
+      <!-- Primary source under /assets; fallback to /images/hero.jpg if you keep that too -->
+      <picture>
+        <!-- You can add a <source> for webp here if you have it -->
+        <img
+          src="/assets/hero-installation.jpg"
+          onerror="this.onerror=null;this.src='/images/hero.jpg';"
+          alt="Mailbox installation team"
+          class="w-full rounded-2xl shadow-lg object-cover aspect-[4/3]"
+          loading="eager"
+          fetchpriority="high"
+        />
+      </picture>
+
+      <!-- Decorative USPS stamp in corner (optional) -->
+      <img src="/usps-approved.svg" alt="USPS approved" class="hidden md:block absolute -top-4 -right-4 h-10 w-10 opacity-80"/>
+    </div>
+  </div>
+
+  <!-- soft background tint to match home hero feel -->
+  <div class="pointer-events-none absolute inset-0 -z-10 bg-gradient-to-b from-white via-white to-[#F6F8FB]"></div>
+</section>
