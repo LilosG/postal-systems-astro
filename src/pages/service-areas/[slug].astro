@@ -1,8 +1,13 @@
 ---
-import SiteFrame from "../../layouts/SiteFrame.astro";
+import LovableLayout from "../../layouts/LovableLayout.astro";
 import { CITIES } from "../../data/cities";
 
 type City = { slug: string; name: string };
+
+export const getStaticPaths = async () => {
+  const paths = (CITIES as City[]).map((c) => ({ params: { slug: c.slug } }));
+  return paths;
+};
 
 const { slug } = Astro.params;
 const city = (CITIES as City[]).find((c) => c.slug === slug);
@@ -13,13 +18,13 @@ if (!city) {
 
 const pageTitle = `${city.name} Service Area | Postal Systems`;
 ---
-<SiteFrame title={pageTitle}>
-  <section class="pt-24 container">
+<LovableLayout title={pageTitle}>
+  <div id="root"></div>
+
+  <section class="pt-24 container mx-auto max-w-6xl px-4">
     <h1 class="text-3xl font-semibold mb-6">{city.name}</h1>
     <p class="mb-8 opacity-80">
       USPS-approved mailbox installation & maintenance in {city.name}.
     </p>
-
-    <!-- Add city-specific content/CTA here as you scale -->
   </section>
-</SiteFrame>
+</LovableLayout>

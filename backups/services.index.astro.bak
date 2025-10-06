@@ -1,10 +1,16 @@
 ---
-import LovableLayout from "../../layouts/LovableLayout.astro";
+import SiteFrame from "../../layouts/SiteFrame.astro";
+import HeroSplit from "../../components/HeroSplit.astro";
+import TrustBadges from "../../components/TrustBadges.astro";
+import StatsStrip from "../../components/StatsStrip.astro";
+import CTASection from "../../components/CTASection.astro";
 
 const pageTitle = "Services | Postal Systems";
 ---
-<LovableLayout title={pageTitle}>
-  <div id="root"></div>
+<SiteFrame title={pageTitle}>
+  <HeroSplit />
+  <TrustBadges />
+  <StatsStrip />
 
   <section class="py-8 md:py-10">
     <div class="container mx-auto max-w-6xl px-4">
@@ -56,4 +62,6 @@ const pageTitle = "Services | Postal Systems";
       </div>
     </div>
   </section>
-</LovableLayout>
+
+  <CTASection />
+</SiteFrame>
