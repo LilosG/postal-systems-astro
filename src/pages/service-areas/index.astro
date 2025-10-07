@@ -13,17 +13,50 @@ const pageTitle = "Service Areas | Postal Systems";
 <LovableLayout title={pageTitle}>
   <div id="root"></div>
 
-  <section class="py-10">
-    <div class="container mx-auto max-w-6xl px-4">
-      <h2 class="text-xl md:text-2xl font-semibold text-center">Browse Areas</h2>
-      <p class="text-slate-600 text-center mt-2">Coverage across San Diego County.</p>
+  <section class="bg-gradient-to-b from-white to-[hsl(var(--secondary))]">
+    <div class="container mx-auto max-w-[1140px] px-4 py-20">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <p class="trust-badge inline-flex">
+            <span class="w-2 h-2 rounded-full bg-[hsl(var(--postal-red))]"></span>
+            San Diego County Coverage
+          </p>
+          <h1 class="font-poppins text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+            USPS-approved mailbox service areas
+          </h1>
+          <p class="text-base text-[hsl(var(--postal-slate))] opacity-90 leading-relaxed">
+            Same look and feel as our homepage—now browse every city we service across the county.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-4">
+            <a href="/contact" class="btn-hero-primary bg-gradient-to-r from-[hsl(var(--postal-navy))] to-[hsl(var(--postal-navy))]">Get a quote</a>
+            <a href="tel:+16195551234" class="btn-hero-secondary">Call now</a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-[var(--shadow-hero)]">
+          <img src="/assets/hero-cbu-installation.jpg" alt="Mailbox installation in San Diego" class="w-full h-[500px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
 
-      <div class="mt-6 grid gap-3 sm:grid-cols-2 md:grid-cols-3">
+  <section class="py-12">
+    <div class="container mx-auto max-w-[1140px] px-4">
+      <div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-3">
         {areas.map((a: AreaItem) => (
-          <a href={a.href} class="block rounded-xl border border-slate-200 bg-white p-4 hover:shadow-md transition">
+          <a href={a.href} class="card-service hover:shadow-[var(--shadow-card)] transition">
             <span class="font-medium">{a.label}</span>
           </a>
         ))}
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container mx-auto max-w-[1140px] px-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="trust-badge">USPS compliant</span>
+        <span class="trust-badge">Licensed & insured</span>
+        <span class="trust-badge">Local installers</span>
       </div>
     </div>
   </section>

@@ -2,18 +2,19 @@
 import LovableLayout from "../../layouts/LovableLayout.astro";
 import { CITIES } from "../../data/cities";
 
-type City = { slug: string; name: string };
+export async function getStaticPaths() {
+  return (CITIES as { slug: string; name: string }[]).map((c) => ({
+    params: { slug: c.slug },
+  }));
+}
 
-export const getStaticPaths = async () => {
-  const paths = (CITIES as City[]).map((c) => ({ params: { slug: c.slug } }));
-  return paths;
-};
+type City = { slug: string; name: string };
 
 const { slug } = Astro.params;
 const city = (CITIES as City[]).find((c) => c.slug === slug);
 
 if (!city) {
-  throw Astro.redirect('/service-areas');
+  throw Astro.redirect("/service-areas");
 }
 
 const pageTitle = `${city.name} Service Area | Postal Systems`;
@@ -21,10 +22,59 @@ const pageTitle = `${city.name} Service Area | Postal Systems`;
 <LovableLayout title={pageTitle}>
   <div id="root"></div>
 
-  <section class="pt-24 container mx-auto max-w-6xl px-4">
-    <h1 class="text-3xl font-semibold mb-6">{city.name}</h1>
-    <p class="mb-8 opacity-80">
-      USPS-approved mailbox installation & maintenance in {city.name}.
-    </p>
+  <section class="bg-gradient-to-b from-white to-[hsl(var(--secondary))]">
+    <div class="container mx-auto max-w-[1140px] px-4 py-20">
+      <div class="grid lg:grid-cols-2 gap-8 items-center">
+        <div class="space-y-4">
+          <p class="trust-badge inline-flex">
+            <span class="w-2 h-2 rounded-full bg-[hsl(var(--postal-red))]"></span>
+            {city.name}, CA
+          </p>
+          <h1 class="font-poppins text-4xl md:text-5xl xl:text-6xl font-bold leading-tight tracking-tight">
+            Mailbox installation & maintenance in {city.name}
+          </h1>
+          <p class="text-base text-[hsl(var(--postal-slate))] opacity-90 leading-relaxed">
+            USPS-approved cluster boxes, 4C, parcel lockers, repairs, and ongoing service—matching the exact styling of our homepage.
+          </p>
+          <div class="flex flex-wrap gap-3 pt-4">
+            <a href="/contact" class="btn-hero-primary bg-gradient-to-r from-[hsl(var(--postal-navy))] to-[hsl(var(--postal-navy))]">Get a quote</a>
+            <a href="/services" class="btn-hero-secondary">See services</a>
+          </div>
+        </div>
+        <div class="rounded-2xl overflow-hidden shadow-[var(--shadow-hero)]">
+          <img src="/assets/hero-installation.jpg" alt={`Mailbox services in ${city.name}`} class="w-full h-[500px] object-cover" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container mx-auto max-w-[1140px] px-4">
+      <h2 class="text-2xl font-semibold mb-6">Popular in {city.name}</h2>
+      <div class="grid gap-4 lg:grid-cols-3">
+        <a href="/services/cluster-box-units" class="card-service">
+          <h3 class="font-semibold">Cluster Box Units (CBU)</h3>
+          <p class="text-sm text-[hsl(var(--postal-slate))] mt-1">Pads, anchors, USPS inspection, keying.</p>
+        </a>
+        <a href="/services/4c-mailboxes" class="card-service">
+          <h3 class="font-semibold">4C Mailboxes</h3>
+          <p class="text-sm text-[hsl(var(--postal-slate))] mt-1">Interior/exterior compliant installs.</p>
+        </a>
+        <a href="/services/repairs-lock-changes" class="card-service">
+          <h3 class="font-semibold">Repairs & Lock Changes</h3>
+          <p class="text-sm text-[hsl(var(--postal-slate))] mt-1">Doors, hinges, cores, tenant keys.</p>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12">
+    <div class="container mx-auto max-w-[1140px] px-4">
+      <div class="flex flex-wrap items-center gap-3">
+        <span class="trust-badge">USPS compliant</span>
+        <span class="trust-badge">Licensed & insured</span>
+        <span class="trust-badge">Local installers</span>
+      </div>
+    </div>
   </section>
 </LovableLayout>
